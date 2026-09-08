@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>口コミ作成サポート｜タップだけで完成</title>
+<meta name="description" content="ボタンをタップするだけで口コミ文章が完成。コピーしてGoogleに貼り付けるだけ。" />
+<style>
+  /* =========================================================
+     店舗ごとの設定はここだけ変更すればOK
+     - STORE_NAME : 店舗名
+     - STORE_COLOR: テーマカラー（HEX）
+     - STORE_EMOJI: ロゴ代わりの絵文字
+     - REVIEW_URL : 口コミ投稿先（GoogleのwritereviewリンクやマップのURL）
+     設定は <script> 内 STORE / 質問は QUESTIONS を編集
+  ========================================================= */
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+    background: #F0F6FB;
+    color: #1A2A3A;
+  }
+  #app {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 24px 20px;
+  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes pop { 0% { transform: scale(1); } 50% { transform: scale(0.96); } 100% { transform: scale(1); } }
+  .fadeUp { animation: fadeUp 0.4s ease; }
+  .slideIn { animation: slideIn 0.3s ease; }
+  .pop { animation: pop 0.28s ease; }
+
+  .center { text-align: center; }
+  .wrap-narrow { max-width: 400px; width: 100%; }
+  .wrap-q { max-width: 430px; width: 100%; }
+
+  .logo-lg {
+    width: 80px; height: 80px; border-radius: 24px;
+    margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;
+    font-size: 40px;
+  }
+  .eyebrow { font-size: 11px; letter-spacing: 0.18em; color: #9BB5CC; text-transform: uppercase; margin-bottom: 8px; }
+  .store-name-lg { font-size: 24px; font-weight: 800; color: #1A2A3A; margin-bottom: 6px; letter-spacing: -0.02em; }
+  .lead1 { font-size: 16px; color: #6A8A9A; line-height: 1.7; margin-bottom: 8px; }
+  .lead2 { font-size: 14px; color: #AAC0CC; margin-bottom: 44px; }
+  .feats { display: flex; justify-content: center; gap: 28px; margin-bottom: 44px; }
+  .feat { text-align: center; }
+  .feat .ic { font-size: 26px; margin-bottom: 6px; }
+  .feat .lb { font-size: 13px; color: #9BB5CC; }
+
+  .btn-primary {
+    width: 100%; padding: 22px 0; color: #fff; border: none; border-radius: 18px;
+    font-size: 20px; font-weight: 800; cursor: pointer; font-family: inherit; letter-spacing: 0.04em;
+  }
+  .demo-note { margin-top: 20px; font-size: 12px; color: #C0D0DA; }
+
+  /* question header */
+  .q-head { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+  .logo-sm { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .q-head .eyebrow { margin-bottom: 0; }
+  .q-head .sn { font-size: 13px; font-weight: 700; color: #1A2A3A; }
+
+  .progress-row { display: flex; justify-content: space-between; margin-bottom: 8px; }
+  .progress-row .num { font-size: 13px; color: #9BB5CC; }
+  .progress-row .dots { font-size: 12px; font-weight: 700; }
+  .bar-bg { height: 5px; background: #D8E8F0; border-radius: 99px; }
+  .bar-fg { height: 100%; border-radius: 99px; transition: width 0.4s ease; }
+
+  .q-text {
+    font-size: 26px; font-weight: 800; color: #1A2A3A; line-height: 1.6;
+    margin: 28px 0; white-space: pre-line; text-align: center; letter-spacing: -0.01em;
+  }
+  .opts { display: flex; flex-direction: column; gap: 12px; }
+  .opt {
+    width: 100%; padding: 21px 18px; background: #fff; color: #1A2A3A;
+    border: 2px solid #D0E4EE; border-radius: 16px; font-size: 18px; font-weight: 600;
+    cursor: pointer; font-family: inherit; text-align: center; letter-spacing: 0.01em;
+    box-shadow: 0 2px 10px rgba(42,127,191,0.08); transition: all 0.14s ease;
+  }
+
+  /* done */
+  .done-check { font-size: 48px; margin-bottom: 10px; }
+  .done-title { font-size: 22px; font-weight: 800; color: #1A2A3A; margin-bottom: 6px; }
+  .done-sub { font-size: 13px; color: #9BB5CC; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; justify-content: center; }
+  .tag { font-size: 11px; padding: 4px 10px; border-radius: 99px; font-weight: 600; }
+  .review-box {
+    background: #fff; border: 2px solid #D0E4EE; border-radius: 20px; padding: 22px 18px;
+    font-size: 17px; line-height: 2.0; color: #1A2A3A; margin-bottom: 12px;
+    box-shadow: 0 4px 16px rgba(42,127,191,0.1);
+  }
+  .edit-note { font-size: 12px; color: #9BB5CC; text-align: center; margin-bottom: 20px; line-height: 1.7; }
+  .how-box { border-radius: 12px; padding: 12px 16px; margin-bottom: 20px; font-size: 13px; line-height: 1.7; text-align: center; }
+  .btn-reset { width: 100%; padding: 14px; background: none; color: #BCD0DA; border: none; font-size: 14px; cursor: pointer; font-family: inherit; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+/* ===================== 店舗設定（ここを変えるだけ） ===================== */
+const STORE = {
+  name: "矯正歯科クリニック",
+  color: "#2A7FBF",
+  emoji: "🦷",
+  reviewUrl: "https://search.google.com/local/writereview", // ←店舗のGoogle口コミ投稿URLに差し替え
+};
+
+/* ===================== 質問（業種に合わせて編集可） ===================== */
+const QUESTIONS = [
+  {
+    id: "visit_type",
+    text: "今回のご来院は\nはじめてでしたか？",
+    options: [
+      { label: "はじめて来た", parts: { visit: ["初めて受診しました。", "初診で伺いました。", "初めての来院でした。"] } },
+      { label: "何度も通っている", parts: { visit: ["定期的に通院しています。", "継続して通院しています。", "引き続き治療でお世話になっています。"] } },
+      { label: "久しぶりに来た", parts: { visit: ["久しぶりに伺いました。", "しばらくぶりの受診でした。", "久々の来院でした。"] } },
+    ],
+  },
+  {
+    id: "wait",
+    text: "待ち時間は\nいかがでしたか？",
+    options: [
+      { label: "ほとんど待たなかった", parts: { wait: ["待ち時間もほとんどなく、スムーズでした。", "予約通りの時間に案内していただけました。", "ほぼ待たずに診ていただけました。"] } },
+      { label: "少し待った", parts: { wait: ["少し待ちましたが、気になるほどではありませんでした。", "待ち時間は少しありましたが、許容範囲内でした。", "やや待ちましたが、問題ありませんでした。"] } },
+      { label: "かなり待った", parts: { wait: ["待ち時間がやや長く感じました。", "少し待ち時間が長かったのが気になりました。", "混んでいて待ち時間が長めでした。"] } },
+    ],
+  },
+  {
+    id: "doctor",
+    text: "先生の説明は\nわかりやすかったですか？",
+    options: [
+      { label: "とてもわかりやすかった", parts: { doctor: ["先生の説明がとても丁寧でわかりやすく、安心できました。", "治療内容を丁寧に説明していただき、納得して治療を受けられました。", "先生が親身になって説明してくださり、疑問が解消されました。"] } },
+      { label: "わかりやすかった", parts: { doctor: ["先生の説明はわかりやすかったです。", "治療の説明も丁寧にしていただけました。", "先生の対応は良く、説明もしっかりしていただきました。"] } },
+      { label: "もう少し詳しく聞きたかった", parts: { doctor: ["説明についてはもう少し詳しく聞けると嬉しかったです。", "治療内容の説明をもう少し丁寧にしていただけると安心でした。", "先生への質問がしやすい雰囲気だとさらに良かったです。"] } },
+    ],
+  },
+  {
+    id: "staff",
+    text: "受付・スタッフの\n対応はいかがでしたか？",
+    options: [
+      { label: "とても親切だった", parts: { staff: ["受付スタッフの方もとても親切で、安心して通院できます。", "スタッフの方々の対応がとても良く、居心地よく過ごせました。", "受付の方が丁寧に対応してくださり、初めてでも緊張しませんでした。"] } },
+      { label: "良かった", parts: { staff: ["受付の対応も良く、気持ちよく利用できました。", "スタッフの方の対応は好印象でした。", "受付の方も丁寧に対応してくれました。"] } },
+      { label: "改善してほしい", parts: { staff: ["受付対応についてはもう少し改善されると嬉しいです。", "スタッフの対応面では改善の余地があると感じました。", "受付での案内がもう少しスムーズだと良いと思いました。"] } },
+    ],
+  },
+  {
+    id: "facility",
+    text: "院内の雰囲気・\n清潔感はいかがでしたか？",
+    options: [
+      { label: "とても清潔で良かった", parts: { facility: ["院内はとても清潔感があり、安心して受診できます。", "クリニック内が清潔で、落ち着いた雰囲気でした。", "院内の環境が整っていて、快適に過ごせました。"] } },
+      { label: "清潔だった", parts: { facility: ["院内は清潔で、気持ちよく受診できました。", "クリニック内は整頓されていました。", "院内環境は良好でした。"] } },
+      { label: "気になる点があった", parts: { facility: ["院内の環境面では少し気になる点がありました。", "設備面での改善があるとより良いと感じました。", "清潔感についてはもう少し工夫があると嬉しいです。"] } },
+    ],
+  },
+  {
+    id: "improve",
+    text: "気になった点は\nありましたか？",
+    options: [
+      { label: "特になかった", parts: { improve: ["特に気になる点はなく、全体的に満足しています。", "とくに問題は感じませんでした。", "全体的に良い印象でした。"] } },
+      { label: "予約が取りにくかった", parts: { improve: ["予約が少し取りにくかったのが気になりました。", "もう少し予約枠が増えると助かります。", "予約の取りやすさが改善されるとより良いと思います。"] } },
+      { label: "費用面が気になった", parts: { improve: ["費用面についてはもう少し丁寧な説明があると安心でした。", "料金説明がもう少し詳しいと良かったです。", "費用の内訳についてもう少し説明があると嬉しかったです。"] } },
+      { label: "駐車場・アクセスが不便", parts: { improve: ["アクセス面では少し不便を感じました。", "駐車場についてもう少し改善されると助かります。", "立地についてはやや不便に感じる点もありました。"] } },
+    ],
+  },
+  {
+    id: "return",
+    text: "引き続き\n通院したいと思いますか？",
+    options: [
+      { label: "ぜひ続けて通いたい", parts: { close: ["信頼できるクリニックです。これからも通院したいと思います。", "安心して任せられるクリニックだと感じています。引き続きお世話になります。", "これからも継続して通院したいと思います。"] } },
+      { label: "また来たいと思う", parts: { close: ["また利用したいと思えるクリニックでした。", "次回もお世話になりたいと思います。", "また来院したいと思います。"] } },
+      { label: "知人にも勧めたい", parts: { close: ["矯正を考えている知人にもぜひ勧めたいと思います。", "信頼できるクリニックなので、周りにも紹介したいと思います。", "知人にも勧めたいと思えるクリニックでした。"] } },
+    ],
+  },
+];
+
+/* ===================== ロジック ===================== */
+const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+function buildReview(storeName, parts) {
+  const visit = pick(parts.visit || [""]);
+  const wait = pick(parts.wait || [""]);
+  const doctor = pick(parts.doctor || [""]);
+  const staff = pick(parts.staff || [""]);
+  const facility = pick(parts.facility || [""]);
+  const improve = pick(parts.improve || [""]);
+  const close = pick(parts.close || [""]);
+  const templates = [
+    `${storeName}を受診しました。${visit}${wait}${doctor}${staff}${facility}${improve}${close}`,
+    `${visit}${storeName}のご紹介です。${wait}${doctor}${staff}${facility}${improve}${close}`,
+    `${storeName}についてのご感想です。${visit}${doctor}${staff}${facility}${wait}${improve}${close}`,
+  ];
+  return pick(templates).trim();
+}
+
+function shuffle(src) {
+  const arr = [...src];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+/* ===================== 状態 ===================== */
+const accent = STORE.color;
+const app = document.getElementById("app");
+let state = { step: "start", qIndex: 0, parts: {}, labels: [], review: "", shuffled: [], tapped: null, copied: false };
+
+function setState(patch) { Object.assign(state, patch); render(); }
+
+/* helper: hex + alpha */
+function alpha(hex, a) { return hex + a; }
+
+function renderStart() {
+  app.innerHTML = `
+    <div class="fadeUp wrap-narrow center">
+      <div class="logo-lg" style="background:${accent};box-shadow:0 12px 32px ${alpha(accent,'40')}">${STORE.emoji}</div>
+      <div class="eyebrow">Patient Review</div>
+      <div class="store-name-lg">${STORE.name}</div>
+      <div class="lead1">ご来院ありがとうございました</div>
+      <div class="lead2">ボタンをタップするだけで口コミが完成します</div>
+      <div class="feats">
+        <div class="feat"><div class="ic">👆</div><div class="lb">タップのみ</div></div>
+        <div class="feat"><div class="ic">📋</div><div class="lb">全${QUESTIONS.length}問</div></div>
+        <div class="feat"><div class="ic">⏱</div><div class="lb">約1分</div></div>
+      </div>
+      <button class="btn-primary" id="startBtn" style="background:${accent};box-shadow:0 10px 28px ${alpha(accent,'50')}">はじめる →</button>
+      <div class="demo-note">※ これはデモ版です</div>
+    </div>`;
+  document.getElementById("startBtn").onclick = () => setState({ step: "q", shuffled: shuffle(QUESTIONS[0].options) });
+}
+
+function renderQuestion() {
+  const i = state.qIndex;
+  const q = QUESTIONS[i];
+  const total = QUESTIONS.length;
+  const dots = "●".repeat(i + 1) + "○".repeat(total - i - 1);
+  const optsHtml = state.shuffled.map((opt, idx) => {
+    const isTapped = state.tapped === opt.label;
+    const bg = isTapped ? accent : "#fff";
+    const col = isTapped ? "#fff" : "#1A2A3A";
+    const bd = isTapped ? accent : "#D0E4EE";
+    const shadow = isTapped ? `0 8px 24px ${alpha(accent,'45')}` : "0 2px 10px rgba(42,127,191,0.08)";
+    return `<button class="opt ${isTapped ? 'pop' : ''}" data-idx="${idx}" style="background:${bg};color:${col};border-color:${bd};box-shadow:${shadow}">${opt.label}</button>`;
+  }).join("");
+
+  app.innerHTML = `
+    <div class="wrap-q" style="margin-top:12px">
+      <div class="q-head">
+        <div class="logo-sm" style="background:${accent}">${STORE.emoji}</div>
+        <div>
+          <div class="eyebrow">Patient Review</div>
+          <div class="sn">${STORE.name}</div>
+        </div>
+      </div>
+      <div style="margin-bottom:28px">
+        <div class="progress-row">
+          <span class="num">質問 ${i + 1} / ${total}</span>
+          <span class="dots" style="color:${accent}">${dots}</span>
+        </div>
+        <div class="bar-bg"><div class="bar-fg" style="background:${accent};width:${((i + 1) / total) * 100}%"></div></div>
+      </div>
+      <div class="q-text slideIn">${q.text}</div>
+      <div class="opts">${optsHtml}</div>
+    </div>`;
+
+  document.querySelectorAll(".opt").forEach((btn) => {
+    btn.onclick = () => handleTap(state.shuffled[Number(btn.dataset.idx)]);
+  });
+}
+
+async function handleTap(opt) {
+  if (state.tapped) return;
+  state.tapped = opt.label;
+  render();
+  await new Promise((r) => setTimeout(r, 280));
+
+  const newParts = { ...state.parts };
+  Object.entries(opt.parts).forEach(([k, v]) => { newParts[k] = v; });
+  const newLabels = [...state.labels, opt.label];
+
+  if (state.qIndex < QUESTIONS.length - 1) {
+    const nextIdx = state.qIndex + 1;
+    setState({ parts: newParts, labels: newLabels, tapped: null, qIndex: nextIdx, shuffled: shuffle(QUESTIONS[nextIdx].options) });
+  } else {
+    setState({ parts: newParts, labels: newLabels, tapped: null, review: buildReview(STORE.name, newParts), step: "done" });
+  }
+}
+
+function renderDone() {
+  const tagsHtml = state.labels.map((l) =>
+    `<span class="tag" style="background:${alpha(accent,'15')};color:${accent}">${l}</span>`
+  ).join("");
+  const copyBg = state.copied ? "#4CAF50" : accent;
+  const copyShadow = state.copied ? "0 10px 28px #4CAF5050" : `0 10px 28px ${alpha(accent,'50')}`;
+  const copyLabel = state.copied ? "✓ コピー済み！Googleが開きます" : "📋 コピーしてGoogleへ進む";
+
+  app.innerHTML = `
+    <div class="fadeUp wrap-q" style="margin-top:12px">
+      <div class="center" style="margin-bottom:24px">
+        <div class="done-check">✅</div>
+        <div class="done-title">口コミ文章ができました</div>
+        <div class="done-sub">コピーしてGoogleに貼り付けてください</div>
+      </div>
+      <div class="tags">${tagsHtml}</div>
+      <div class="review-box" id="reviewBox">${state.review}</div>
+      <div class="edit-note">※ 内容はご自身で自由に変更できます。実際にご利用いただいた率直なご感想として、ご自身の言葉に整えてからご投稿ください。投稿は任意で、投稿による謝礼・特典はありません（やらせ・サクラ投稿は固くお断りしています）。</div>
+      <button class="btn-primary" id="copyBtn" style="background:${copyBg};box-shadow:${copyShadow};padding:24px 0;font-size:19px;margin-bottom:10px;transition:background .25s">${copyLabel}</button>
+      <div class="how-box" style="background:${alpha(accent,'10')};color:${accent}">
+        ボタンを押すと文章がコピーされ<br/>Googleのページが自動で開きます。<br/>あとは貼り付けるだけ！
+      </div>
+      <button class="btn-reset" id="resetBtn">最初からやり直す</button>
+    </div>`;
+
+  document.getElementById("copyBtn").onclick = () => {
+    const text = state.review;
+    const open = () => window.open(STORE.reviewUrl, "_blank");
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).catch(() => {});
+    } else {
+      // fallback
+      const ta = document.createElement("textarea");
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(ta);
+    }
+    setState({ copied: true });
+    setTimeout(open, 400);
+  };
+  document.getElementById("resetBtn").onclick = () =>
+    setState({ step: "start", qIndex: 0, parts: {}, labels: [], review: "", tapped: null, copied: false });
+}
+
+function render() {
+  if (state.step === "start") renderStart();
+  else if (state.step === "q") renderQuestion();
+  else if (state.step === "done") renderDone();
+}
+
+render();
+</script>
+</body>
+</html>

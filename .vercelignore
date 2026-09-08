@@ -1,0 +1,9 @@
+node_modules
+build-deck.js
+package.json
+package-lock.json
+*.pptx
+*.pdf
+qa
+.claude
+README.md

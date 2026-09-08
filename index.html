@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Googleの評判、まるごとお任せ｜評判改善・集客 総合コンサルパック</title>
+<meta name="description" content="Googleマップの悪い口コミ・サジェスト・ネット評判にお困りの店舗・事業者さまへ。AIによる口コミ対策サポート、提携弁護士の窓口、公式WEB・LINE・アプリまで。契約中ずっと使える月額パッケージで『選ばれ続けるお店』をつくります。" />
+<style>
+  :root {
+    --navy: #0f2c4d;
+    --navy-soft: #1a4170;
+    --blue: #2563eb;
+    --blue-light: #3b82f6;
+    --gold: #f5a623;
+    --gold-dark: #d98e0b;
+    --green: #16a34a;
+    --teal: #0e7490;
+    --bg: #f6f9fc;
+    --bg-alt: #eef4fb;
+    --ink: #1f2937;
+    --ink-soft: #4b5563;
+    --line: #e2e8f0;
+    --white: #ffffff;
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(15, 44, 77, 0.08);
+    --shadow-lg: 0 20px 50px rgba(15, 44, 77, 0.14);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { width: min(1120px, 90%); margin-inline: auto; }
+  .accent { color: var(--gold); }
+  .blue-text { color: var(--blue); }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-weight: 800; font-size: 1.15rem; color: var(--navy); letter-spacing: 0.02em; display: flex; align-items: center; gap: 8px; }
+  .logo .star { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold); color: #fff; padding: 10px 22px; border-radius: 999px;
+    font-weight: 700; font-size: 0.92rem; transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 14px rgba(245, 166, 35, 0.4);
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(245, 166, 35, 0.5); }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 60%, var(--blue) 130%);
+    color: #fff; padding: 84px 0 110px; overflow: hidden;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 80% 20%, rgba(245, 166, 35, 0.18), transparent 45%),
+                      radial-gradient(circle at 10% 90%, rgba(59, 130, 246, 0.25), transparent 40%);
+  }
+  .hero .wrap { position: relative; z-index: 2; }
+  .hero-badge {
+    display: inline-block; background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 7px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; backdrop-filter: blur(4px);
+  }
+  .hero h1 { font-size: clamp(1.9rem, 5vw, 3.1rem); font-weight: 800; line-height: 1.42; letter-spacing: 0.01em; margin-bottom: 24px; }
+  .hero h1 .hl { color: var(--gold); }
+  .hero p.lead { font-size: clamp(1rem, 2.2vw, 1.18rem); color: rgba(255, 255, 255, 0.9); max-width: 700px; margin-bottom: 30px; }
+  .stars-line { display: flex; align-items: center; gap: 14px; margin-bottom: 34px; flex-wrap: wrap; }
+  .stars { font-size: 1.7rem; letter-spacing: 2px; }
+  .stars .filled { color: var(--gold); }
+  .stars .empty { color: rgba(255,255,255,0.35); }
+  .stars-line .arrow { font-size: 1.4rem; color: rgba(255,255,255,0.7); }
+  .stars-line .label { font-size: 0.85rem; color: rgba(255,255,255,0.75); }
+  .hero-cta-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; padding: 16px 34px; border-radius: 999px;
+    font-weight: 700; font-size: 1.02rem; transition: transform 0.15s, box-shadow 0.15s, background 0.2s; cursor: pointer; border: none;
+  }
+  .btn-primary { background: var(--gold); color: #fff; box-shadow: 0 8px 24px rgba(245, 166, 35, 0.45); }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(245, 166, 35, 0.55); }
+  .btn-ghost { background: rgba(255,255,255,0.1); color: #fff; border: 1.5px solid rgba(255,255,255,0.5); }
+  .btn-ghost:hover { background: rgba(255,255,255,0.2); }
+  .hero-note { margin-top: 18px; font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+  .wave { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; z-index: 1; }
+
+  /* Section base */
+  section { padding: 84px 0; }
+  .section-head { text-align: center; margin-bottom: 52px; }
+  .eyebrow { display: inline-block; color: var(--blue); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.12em; margin-bottom: 12px; }
+  .section-head h2 { font-size: clamp(1.5rem, 3.6vw, 2.15rem); font-weight: 800; color: var(--navy); line-height: 1.45; }
+  .section-head p { color: var(--ink-soft); margin-top: 14px; font-size: 1.02rem; }
+
+  /* Problems */
+  .problems { background: var(--bg); }
+  .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
+  .problem-card { background: #fff; border-radius: var(--radius); padding: 30px 26px; box-shadow: var(--shadow); border: 1px solid var(--line); }
+  .problem-card .ico { font-size: 1.9rem; margin-bottom: 14px; display: inline-block; }
+  .problem-card h3 { font-size: 1.06rem; color: var(--navy); margin-bottom: 10px; font-weight: 700; line-height: 1.5; }
+  .problem-card p { font-size: 0.93rem; color: var(--ink-soft); }
+  .problem-quote { text-align: center; margin-top: 48px; font-size: clamp(1.1rem, 2.6vw, 1.5rem); font-weight: 700; color: var(--navy); line-height: 1.6; }
+
+  /* Insight strip */
+  .insight { background: var(--navy); color: #fff; text-align: center; }
+  .insight h2 { font-size: clamp(1.5rem, 3.8vw, 2.3rem); font-weight: 800; line-height: 1.5; margin-bottom: 18px; }
+  .insight h2 .accent { color: var(--gold); }
+  .insight p { color: rgba(255,255,255,0.82); font-size: 1.05rem; max-width: 760px; margin: 0 auto; }
+  .insight-chips { display: flex; gap: 20px; justify-content: center; margin-top: 38px; flex-wrap: wrap; }
+  .insight-chip { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.16); border-radius: var(--radius); padding: 22px 26px; max-width: 330px; text-align: left; }
+  .insight-chip .ttl { font-weight: 800; font-size: 1.15rem; margin-bottom: 6px; }
+  .insight-chip.means .ttl { color: #9fb4d4; }
+  .insight-chip.goal .ttl { color: var(--gold); }
+  .insight-chip p { font-size: 0.92rem; color: rgba(255,255,255,0.72); }
+
+  /* What's included */
+  .included { background: linear-gradient(180deg, #fff, var(--bg-alt)); }
+  .inc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+  .inc-card { background: #fff; border-radius: var(--radius); padding: 30px 28px; box-shadow: var(--shadow); border: 1px solid var(--line); position: relative; overflow: hidden; }
+  .inc-card .top { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .inc-ico { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; font-size: 1.5rem; flex-shrink: 0; color: #fff; }
+  .inc-card h3 { font-size: 1.12rem; font-weight: 800; color: var(--navy); line-height: 1.4; }
+  .inc-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; margin-top: 5px; }
+  .tag-ai { background: #eef6ff; color: var(--blue); }
+  .tag-law { background: #f0fbf5; color: var(--green); }
+  .tag-free { background: #fff5e6; color: var(--gold-dark); }
+  .tag-opt { background: #f1f5f9; color: var(--ink-soft); }
+  .tag-allplan { background: #e0f7fb; color: #0e7490; }
+  .inc-card p { font-size: 0.93rem; color: var(--ink-soft); }
+  .inc-card .badge-free { position: absolute; top: 18px; right: -34px; transform: rotate(45deg); background: var(--gold); color: #fff; font-size: 0.7rem; font-weight: 800; padding: 4px 40px; box-shadow: var(--shadow); }
+
+  /* LINE flow */
+  .lineflow { background: var(--bg); }
+  .lineflow-card { background: linear-gradient(135deg, #06c755 0%, #04a548 100%); border-radius: 22px; padding: 44px; color: #fff; box-shadow: var(--shadow-lg); position: relative; overflow: hidden; }
+  .lineflow-card::before { content: ""; position: absolute; right: -60px; top: -60px; width: 240px; height: 240px; border-radius: 50%; background: rgba(255,255,255,0.08); }
+  .lineflow-card h3 { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; margin-bottom: 10px; position: relative; }
+  .lineflow-card .sub { color: rgba(255,255,255,0.9); margin-bottom: 30px; font-size: 1rem; position: relative; }
+  .flow-steps { display: flex; gap: 12px; flex-wrap: wrap; position: relative; }
+  .flow-step { flex: 1 1 160px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.25); border-radius: 14px; padding: 18px 16px; position: relative; }
+  .flow-step .n { font-size: 0.78rem; font-weight: 800; opacity: 0.85; margin-bottom: 6px; }
+  .flow-step h4 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
+  .flow-step p { font-size: 0.82rem; color: rgba(255,255,255,0.85); line-height: 1.55; }
+  /* LINE design mindmap */
+  .mindmap { margin-top: 40px; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 38px 30px; box-shadow: var(--shadow); }
+  .mindmap-head { text-align: center; margin-bottom: 30px; }
+  .mindmap-tag { display: inline-block; font-size: 0.78rem; font-weight: 700; color: #06a04a; background: #e9fbef; padding: 5px 14px; border-radius: 999px; margin-bottom: 12px; letter-spacing: 0.06em; }
+  .mindmap-head h3 { font-size: clamp(1.2rem, 2.7vw, 1.6rem); font-weight: 800; color: var(--navy); line-height: 1.45; }
+  .mindmap-head > p { color: var(--ink-soft); font-size: 0.96rem; margin-top: 10px; max-width: 720px; margin-inline: auto; }
+  .mm { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0; max-width: 920px; margin: 0 auto; }
+  .mm-center { grid-column: 2; order: 2; width: 160px; height: 160px; border-radius: 50%; background: linear-gradient(135deg,#06c755,#04a548); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; font-weight: 800; font-size: 1rem; line-height: 1.4; box-shadow: 0 12px 30px rgba(6,199,85,0.35); margin: 0 24px; flex-shrink: 0; }
+  .mm-center__ic { font-size: 2rem; }
+  .mm-branches { display: contents; }
+  .mm-node { display: flex; align-items: flex-start; gap: 12px; background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; position: relative; }
+  .mm-node__ic { font-size: 1.4rem; flex-shrink: 0; }
+  .mm-node b { display: block; font-size: 0.98rem; color: var(--navy); margin-bottom: 3px; }
+  .mm-node span:not(.mm-node__ic) { display: block; font-size: 0.82rem; color: var(--ink-soft); line-height: 1.5; }
+  /* left column nodes (a,c,e) and right column (b,d,f) via order */
+  .mm-node--a { grid-column: 1; order: 1; margin-bottom: 12px; }
+  .mm-node--c { grid-column: 1; order: 4; margin-block: 12px; }
+  .mm-node--e { grid-column: 1; order: 7; margin-top: 12px; }
+  .mm-node--b { grid-column: 3; order: 3; margin-bottom: 12px; }
+  .mm-node--d { grid-column: 3; order: 6; margin-block: 12px; }
+  .mm-node--f { grid-column: 3; order: 9; margin-top: 12px; }
+  .mm-node--a, .mm-node--c, .mm-node--e { text-align: right; flex-direction: row-reverse; }
+  .mindmap-note { text-align: center; font-size: 0.88rem; color: var(--ink-soft); margin-top: 26px; line-height: 1.7; }
+  .mindmap-note b { color: var(--navy); }
+  @media (max-width: 760px) {
+    .mm { grid-template-columns: 1fr; }
+    .mm-center { grid-column: 1; order: 0 !important; margin: 0 auto 18px; width: 130px; height: 130px; font-size: 0.9rem; }
+    .mm-node { grid-column: 1 !important; order: initial !important; margin: 0 0 10px !important; text-align: left !important; flex-direction: row !important; }
+  }
+
+  /* Branching scenario flowchart */
+  .branch { margin-top: 40px; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 38px 30px; box-shadow: var(--shadow); }
+  .branch-head { text-align: center; margin-bottom: 30px; }
+  .branch-tag { display: inline-block; font-size: 0.78rem; font-weight: 700; color: var(--green); background: #ecfdf3; padding: 5px 14px; border-radius: 999px; margin-bottom: 12px; letter-spacing: 0.06em; }
+  .branch-head h3 { font-size: clamp(1.2rem, 2.7vw, 1.6rem); font-weight: 800; color: var(--navy); line-height: 1.45; }
+  .branch-head > p { color: var(--ink-soft); font-size: 0.96rem; margin-top: 10px; max-width: 720px; margin-inline: auto; }
+  .branch-chart { display: flex; flex-direction: column; align-items: center; }
+  .bnode { background: var(--bg); border: 1.5px solid var(--line); border-radius: 12px; padding: 12px 18px; font-size: 0.92rem; font-weight: 700; color: var(--navy); text-align: center; line-height: 1.5; }
+  .bnode--root { background: linear-gradient(135deg,#06c755,#04a548); color: #fff; border: none; font-size: 0.98rem; box-shadow: 0 6px 16px rgba(6,199,85,0.3); }
+  .bnode__ic { margin-right: 8px; }
+  .branch-split { position: relative; margin: 0; padding: 8px 0; font-size: 0.72rem; font-weight: 800; color: var(--ink-soft); }
+  .branch-split::before, .branch-split::after { content: ""; position: absolute; left: 50%; width: 2px; background: var(--line); }
+  .branch-split::before { top: -10px; height: 18px; }
+  .branch-cols { display: flex; gap: 24px; width: 100%; max-width: 760px; position: relative; padding-top: 16px; }
+  .branch-cols::before { content: ""; position: absolute; top: 0; left: 25%; right: 25%; height: 2px; background: var(--line); }
+  .branch-cols > .bpath::before { content: ""; position: absolute; top: -16px; width: 2px; height: 16px; background: var(--line); }
+  .bpath { flex: 1 1 0; display: flex; flex-direction: column; align-items: center; gap: 0; position: relative; border-radius: 16px; padding: 18px 14px; }
+  .bpath--good { background: #f0fbf5; border: 1px solid #c7ecd5; }
+  .bpath--good::before { left: 50%; }
+  .bpath--bad { background: #fef6f0; border: 1px solid #f6d9c6; }
+  .bpath--bad::before { left: 50%; }
+  .bpath .bnode { width: 100%; }
+  .bnode--cond { background: #fff; font-size: 0.95rem; }
+  .bpath--good .bnode--cond { border-color: var(--green); color: var(--green); }
+  .bpath--bad .bnode--cond { border-color: #ea580c; color: #ea580c; }
+  .bconnect { width: 2px; height: 18px; background: #cbd5e1; }
+  .bnode--goal { background: linear-gradient(135deg,#f5a623,#d98e0b); color: #fff; border: none; }
+  .bnode--goal2 { background: linear-gradient(135deg,#0f2c4d,#2563eb); color: #fff; border: none; }
+  .branch-note { text-align: center; font-size: 0.9rem; color: var(--ink-soft); margin-top: 24px; line-height: 1.7; }
+  .branch-note b { color: var(--navy); }
+  /* Hearing-type branch (tabbed) */
+  .hearing { margin-top: 40px; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 38px 30px; box-shadow: var(--shadow); }
+  .hearing-head { text-align: center; margin-bottom: 24px; }
+  .hearing-tag { display: inline-block; font-size: 0.78rem; font-weight: 700; color: var(--blue); background: #eef4fb; padding: 5px 14px; border-radius: 999px; margin-bottom: 12px; letter-spacing: 0.06em; }
+  .hearing-head h3 { font-size: clamp(1.2rem, 2.7vw, 1.6rem); font-weight: 800; color: var(--navy); line-height: 1.45; }
+  .hearing-head > p { color: var(--ink-soft); font-size: 0.96rem; margin-top: 10px; max-width: 760px; margin-inline: auto; }
+  .hearing-tabs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 26px; }
+  .hearing-tab { background: var(--bg); border: 1.5px solid var(--line); border-radius: 999px; padding: 10px 20px; font-size: 0.92rem; font-weight: 700; color: var(--ink-soft); cursor: pointer; font-family: inherit; transition: all 0.15s; }
+  .hearing-tab.is-active { background: var(--navy); color: #fff; border-color: var(--navy); box-shadow: 0 6px 16px rgba(15,44,77,0.25); }
+  .hearing-panel { display: none; }
+  .hearing-panel.is-active { display: block; animation: fadeUp 0.35s ease; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .hflow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 18px; }
+  .hstep { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 16px 14px; position: relative; }
+  .hstep__n { position: absolute; top: -12px; left: 14px; width: 28px; height: 28px; border-radius: 50%; background: var(--blue); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: 0.85rem; box-shadow: 0 4px 10px rgba(37,99,235,0.35); }
+  .hstep__b { margin-top: 8px; }
+  .hstep__b b { display: block; font-size: 0.95rem; color: var(--navy); margin-bottom: 6px; }
+  .hstep__b span { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.55; }
+  .hgoal { background: linear-gradient(135deg, #fff7ea, #fff); border: 1.5px solid var(--gold); border-radius: 14px; padding: 18px 20px; }
+  .hgoal__head { font-size: 1.02rem; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+  .hgoal__chips { display: flex; gap: 10px; flex-wrap: wrap; }
+  .hchip { font-size: 0.84rem; font-weight: 700; color: var(--gold-dark); background: #fff; border: 1px solid #f0d49a; border-radius: 999px; padding: 7px 14px; }
+  .hchip--soft { color: var(--ink-soft); border-color: var(--line); background: var(--bg); }
+  .hearing-cross { font-size: 0.9rem; color: var(--ink-soft); margin-top: 16px; line-height: 1.65; padding-left: 2px; }
+  .hearing-cross b { color: var(--navy); }
+  .hearing-note { text-align: center; font-size: 0.88rem; color: var(--ink-soft); margin-top: 24px; line-height: 1.7; max-width: 800px; margin-inline: auto; }
+  .hearing-note b { color: var(--navy); }
+  @media (max-width: 760px) {
+    .hflow { grid-template-columns: 1fr 1fr; gap: 16px 12px; }
+  }
+  @media (max-width: 480px) {
+    .hflow { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 680px) {
+    .branch-cols { flex-direction: column; gap: 16px; }
+    .branch-cols::before { display: none; }
+    .branch-cols > .bpath::before { display: none; }
+  }
+
+  /* Review tool */
+  .tool { background: linear-gradient(180deg, #fff, var(--bg-alt)); }
+  .tool-wrap { display: flex; gap: 48px; align-items: center; flex-wrap: wrap; }
+  .tool-text { flex: 1 1 380px; }
+  .tool-text h2 { font-size: clamp(1.5rem, 3.4vw, 2.15rem); font-weight: 800; line-height: 1.45; color: var(--navy); margin-bottom: 16px; }
+  .tool-text h2 .hl { color: var(--gold-dark); }
+  .tool-text > p { color: var(--ink-soft); font-size: 1.02rem; margin-bottom: 24px; }
+  .tool-points { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 30px; }
+  .tool-points li { display: flex; gap: 12px; font-size: 0.98rem; line-height: 1.55; color: var(--ink); }
+  .tool-points li .dot { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--bg-alt); color: var(--blue); display: grid; place-items: center; font-size: 0.9rem; font-weight: 800; margin-top: 2px; }
+  .tool-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: #fff; padding: 15px 30px; border-radius: 999px; font-weight: 700; font-size: 1rem; box-shadow: 0 8px 22px rgba(245,166,35,0.4); transition: transform 0.15s, box-shadow 0.15s; }
+  .tool-cta:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(245,166,35,0.5); }
+  /* NFC 3-step flow diagram */
+  .nfc-flow { margin-top: 56px; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 40px 32px; box-shadow: var(--shadow); }
+  .nfc-flow-head { text-align: center; margin-bottom: 32px; }
+  .nfc-flow-tag { display: inline-block; font-size: 0.78rem; font-weight: 700; color: #475569; background: #eef2f7; padding: 5px 14px; border-radius: 999px; margin-bottom: 14px; }
+  .nfc-flow-head h3 { font-size: clamp(1.25rem, 2.8vw, 1.7rem); font-weight: 800; color: var(--navy); line-height: 1.45; }
+  .nfc-flow-head h3 .hl { color: var(--gold-dark); }
+  .nfc-flow-head > p { color: var(--ink-soft); font-size: 0.98rem; margin-top: 10px; }
+  .nfc-steps { display: flex; align-items: stretch; justify-content: center; gap: 8px; flex-wrap: wrap; }
+  .nfc-step { flex: 1 1 230px; max-width: 300px; background: var(--bg); border: 1px solid var(--line); border-radius: 16px; padding: 22px 20px; text-align: center; }
+  .nfc-step__art { display: grid; place-items: center; height: 96px; margin-bottom: 8px; }
+  .nfc-step__n { font-size: 0.74rem; font-weight: 800; letter-spacing: 0.1em; color: var(--blue); margin-bottom: 6px; }
+  .nfc-step h4 { font-size: 1.04rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+  .nfc-step p { font-size: 0.86rem; color: var(--ink-soft); line-height: 1.6; }
+  .nfc-arrow { display: grid; place-items: center; font-size: 1.6rem; color: #c3d0de; font-weight: 800; flex: 0 0 auto; }
+  .nfc-flow-link { display: block; text-align: center; margin-top: 28px; color: var(--blue); font-weight: 700; font-size: 0.95rem; }
+  .nfc-flow-link:hover { text-decoration: underline; }
+  @media (max-width: 720px) {
+    .nfc-arrow { transform: rotate(90deg); padding: 4px 0; }
+    .nfc-step { flex-basis: 100%; max-width: 360px; }
+  }
+  /* phone mockup */
+  .tool-phone { flex: 0 0 auto; width: 270px; margin: 0 auto; }
+  .phone-frame { background: #1a2a3a; border-radius: 34px; padding: 12px; box-shadow: var(--shadow-lg); }
+  .phone-screen { background: #F0F6FB; border-radius: 24px; overflow: hidden; padding: 26px 20px 30px; }
+  .ps-logo { width: 56px; height: 56px; border-radius: 16px; background: #2A7FBF; margin: 0 auto 14px; display: grid; place-items: center; font-size: 28px; box-shadow: 0 8px 20px rgba(42,127,191,0.3); }
+  .ps-eyebrow { font-size: 8px; letter-spacing: 0.16em; color: #9BB5CC; text-transform: uppercase; text-align: center; margin-bottom: 5px; }
+  .ps-name { font-size: 14px; font-weight: 800; color: #1A2A3A; text-align: center; margin-bottom: 14px; }
+  .ps-q { font-size: 14px; font-weight: 800; color: #1A2A3A; text-align: center; line-height: 1.5; margin-bottom: 14px; }
+  .ps-opt { background: #fff; border: 2px solid #D0E4EE; border-radius: 12px; padding: 11px; font-size: 12px; font-weight: 600; color: #1A2A3A; text-align: center; margin-bottom: 8px; }
+  .ps-opt.sel { background: #2A7FBF; color: #fff; border-color: #2A7FBF; }
+  .ps-bar { height: 4px; background: #D8E8F0; border-radius: 99px; margin-bottom: 16px; }
+  .ps-bar > i { display: block; height: 100%; width: 60%; background: #2A7FBF; border-radius: 99px; }
+
+  /* App pride */
+  .apppride { background: var(--bg); }
+  .apppride .section-head h2 .accent { color: var(--gold-dark); }
+  .apppride-grid { display: flex; gap: 36px; justify-content: center; align-items: flex-start; flex-wrap: wrap; }
+  /* store search mock */
+  .store-mock { flex: 1 1 380px; max-width: 480px; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 22px; box-shadow: var(--shadow); }
+  .store-mock__head { display: flex; gap: 10px; margin-bottom: 14px; }
+  .store-mock__store { font-size: 0.78rem; font-weight: 700; color: #fff; background: #0f2c4d; padding: 5px 12px; border-radius: 999px; }
+  .store-mock__store--g { background: #00875f; }
+  .store-search { background: var(--bg-alt); border-radius: 10px; padding: 11px 14px; font-size: 0.92rem; color: var(--ink-soft); font-weight: 600; margin-bottom: 14px; }
+  .store-list { display: flex; flex-direction: column; gap: 10px; }
+  .store-item { display: flex; align-items: center; gap: 12px; padding: 10px; border-radius: 12px; }
+  .store-item--top { background: #fff; border: 2px solid var(--gold); box-shadow: 0 6px 18px rgba(245,166,35,0.18); }
+  .store-item--dim { opacity: 0.55; }
+  .store-item__icon { width: 50px; height: 50px; border-radius: 12px; display: grid; place-items: center; font-size: 1.5rem; flex-shrink: 0; }
+  .store-item__body { flex: 1 1 auto; min-width: 0; }
+  .store-item__name { font-size: 0.96rem; font-weight: 800; color: var(--navy); }
+  .store-item__dev { font-size: 0.78rem; color: var(--gold-dark); font-weight: 700; }
+  .store-item__meta { font-size: 0.76rem; color: var(--ink-soft); margin-top: 2px; }
+  .store-item__bar { height: 8px; background: #e2e8f0; border-radius: 99px; margin-top: 6px; width: 60%; }
+  .store-item__bar--lg { width: 85%; height: 10px; }
+  .store-item__btn { flex-shrink: 0; background: var(--blue); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 6px 16px; border-radius: 999px; }
+  .store-item__btn--dim { background: #cbd5e1; }
+  .store-mock__cap { text-align: center; font-size: 0.82rem; color: var(--ink-soft); margin-top: 16px; }
+  /* home screen mock */
+  .home-mock { flex: 0 0 auto; width: 260px; }
+  .home-phone { background: #1a2a3a; border-radius: 34px; padding: 12px; box-shadow: var(--shadow-lg); }
+  .home-screen { background: linear-gradient(160deg,#3b6ea5,#6aa0d0); border-radius: 24px; padding: 18px 16px 22px; min-height: 360px; }
+  .home-time { text-align: center; color: #fff; font-weight: 800; font-size: 1.1rem; margin-bottom: 18px; }
+  .home-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px 10px; }
+  .home-app { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+  .home-app__ic { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; font-size: 1.3rem; background: rgba(255,255,255,0.9); }
+  .home-app__ic--dim { background: rgba(255,255,255,0.78); filter: saturate(0.6); }
+  .home-app__lb { font-size: 0.6rem; color: #fff; text-align: center; line-height: 1.2; max-width: 54px; }
+  .home-app--mine .home-app__ic { box-shadow: 0 0 0 3px var(--gold), 0 6px 14px rgba(245,166,35,0.5); animation: pulseMine 1.8s ease-in-out 3; }
+  .home-app--mine .home-app__lb { color: #fff5e6; font-weight: 800; }
+  @keyframes pulseMine { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+  .home-mock__cap { text-align: center; font-size: 0.82rem; color: var(--ink-soft); margin-top: 16px; }
+  .apppride-note { text-align: center; font-size: 0.88rem; color: var(--ink-soft); margin-top: 36px; max-width: 760px; margin-inline: auto; line-height: 1.7; }
+
+  /* AI support */
+  .aisupport { background: linear-gradient(135deg, #0e2a4a 0%, #0e7490 130%); color: #fff; position: relative; overflow: hidden; }
+  .aisupport::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 88% 20%, rgba(34,211,238,0.22), transparent 45%); }
+  .ai-wrap { position: relative; z-index: 2; display: flex; gap: 48px; align-items: center; flex-wrap: wrap; }
+  .ai-text { flex: 1 1 380px; }
+  .ai-text .eyebrow { color: #5eead4; }
+  .ai-text h2 { font-size: clamp(1.5rem, 3.4vw, 2.15rem); font-weight: 800; line-height: 1.45; margin-bottom: 18px; }
+  .ai-text h2 .hl { color: #5eead4; }
+  .ai-text > p { color: rgba(255,255,255,0.86); font-size: 1.02rem; margin-bottom: 24px; }
+  .ai-points { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .ai-points li { display: flex; gap: 12px; font-size: 0.98rem; line-height: 1.55; }
+  .ai-points li .dot { flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%; background: rgba(94,234,212,0.2); color: #5eead4; display: grid; place-items: center; font-size: 0.85rem; font-weight: 800; margin-top: 2px; }
+  .ai-chat { flex: 1 1 340px; max-width: 420px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.18); border-radius: 22px; padding: 22px; backdrop-filter: blur(6px); box-shadow: var(--shadow-lg); }
+  .ai-chat-head { display: flex; align-items: center; gap: 10px; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.14); margin-bottom: 16px; }
+  .ai-chat-head .av { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg,#0891b2,#22d3ee); display: grid; place-items: center; font-size: 1.1rem; }
+  .ai-chat-head .nm { font-weight: 800; font-size: 0.95rem; }
+  .ai-chat-head .st { font-size: 0.74rem; color: #5eead4; }
+  .bubble { max-width: 82%; padding: 11px 15px; border-radius: 16px; font-size: 0.9rem; line-height: 1.5; margin-bottom: 12px; }
+  .bubble.user { background: #2563eb; color: #fff; margin-left: auto; border-bottom-right-radius: 5px; }
+  .bubble.ai { background: rgba(255,255,255,0.92); color: #1f2937; border-bottom-left-radius: 5px; }
+  .bubble.ai b { color: #0e7490; }
+
+  /* Premium full-funnel */
+  .premium { background: linear-gradient(160deg, #0a1f38 0%, #0f2c4d 55%, #1a3a64 130%); color: #fff; position: relative; overflow: hidden; }
+  .premium::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 85% 12%, rgba(245,166,35,0.18), transparent 42%), radial-gradient(circle at 8% 90%, rgba(37,99,235,0.22), transparent 40%); }
+  .premium .wrap { position: relative; z-index: 2; }
+  .premium-badge { display: inline-block; background: linear-gradient(135deg,#f5a623,#d98e0b); color: #fff; font-weight: 800; font-size: 0.82rem; letter-spacing: 0.08em; padding: 7px 18px; border-radius: 999px; margin: 0 auto 18px; box-shadow: 0 8px 22px rgba(245,166,35,0.4); }
+  .premium .section-head { margin-bottom: 40px; }
+  .premium .section-head h2 { color: #fff; }
+  .premium .section-head p { color: rgba(255,255,255,0.82); }
+  /* funnel */
+  .funnel { display: flex; align-items: stretch; justify-content: center; gap: 6px; flex-wrap: wrap; margin-bottom: 36px; }
+  .fstep { flex: 1 1 180px; max-width: 220px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.16); border-radius: 16px; padding: 22px 18px; text-align: center; position: relative; }
+  .fstep--goal { background: linear-gradient(135deg, rgba(245,166,35,0.22), rgba(245,166,35,0.08)); border-color: var(--gold); }
+  .fstep__n { position: absolute; top: 12px; right: 14px; font-size: 0.78rem; font-weight: 800; color: rgba(255,255,255,0.4); }
+  .fstep__ic { font-size: 2rem; display: block; margin-bottom: 10px; }
+  .fstep h4 { font-size: 1.02rem; font-weight: 800; margin-bottom: 8px; color: #fff; }
+  .fstep p { font-size: 0.82rem; color: rgba(255,255,255,0.78); line-height: 1.6; }
+  .fstep-arw { display: flex; align-items: center; color: rgba(255,255,255,0.4); font-weight: 800; font-size: 1.2rem; flex: 0 0 auto; }
+  /* highlight cols */
+  .premium-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 36px; }
+  .premium-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.16); border-radius: 16px; padding: 24px 24px; }
+  .premium-box h4 { font-size: 1.08rem; font-weight: 800; margin-bottom: 12px; color: #fff; }
+  .premium-box p { font-size: 0.92rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
+  .premium-box b { color: #ffd98a; }
+  .kw-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .kw-tag { font-size: 0.82rem; font-weight: 700; color: #ffe; background: rgba(245,166,35,0.18); border: 1px solid rgba(245,166,35,0.5); border-radius: 8px; padding: 6px 12px; }
+  /* price bar */
+  .premium-price { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: 18px; padding: 26px 30px; }
+  .premium-price__label { font-size: 0.95rem; color: rgba(255,255,255,0.8); font-weight: 700; margin-bottom: 6px; }
+  .premium-price__amt { font-size: 2rem; font-weight: 800; color: var(--gold); font-family: Georgia, serif; }
+  .premium-price__amt span { font-size: 0.92rem; color: rgba(255,255,255,0.7); font-weight: 600; font-family: inherit; margin-left: 8px; }
+  .premium-price__btn { flex-shrink: 0; background: var(--gold); color: #fff; font-weight: 800; font-size: 1rem; padding: 16px 30px; border-radius: 999px; box-shadow: 0 8px 22px rgba(245,166,35,0.45); transition: transform 0.15s, box-shadow 0.15s; }
+  .premium-price__btn:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(245,166,35,0.55); }
+  .premium-note { text-align: center; font-size: 0.86rem; color: rgba(255,255,255,0.65); margin-top: 22px; max-width: 760px; margin-inline: auto; line-height: 1.7; }
+  @media (max-width: 860px) {
+    .premium-cols { grid-template-columns: 1fr; }
+    .fstep-arw { transform: rotate(90deg); }
+    .fstep { flex-basis: 100%; max-width: 360px; }
+  }
+
+  /* Pricing */
+  .pricing { background: linear-gradient(180deg, var(--bg-alt), #fff); }
+  .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 24px; align-items: stretch; }
+  .price-card { background: #fff; border-radius: 20px; padding: 36px 28px; box-shadow: var(--shadow); border: 2px solid var(--line); display: flex; flex-direction: column; position: relative; }
+  .price-card.featured { border-color: var(--gold); box-shadow: var(--shadow-lg); transform: scale(1.03); }
+  .price-ribbon { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #fff; font-size: 0.76rem; font-weight: 700; padding: 6px 20px; border-radius: 999px; white-space: nowrap; box-shadow: 0 6px 16px rgba(245,166,35,0.4); }
+  .price-card .plan-name { font-size: 1.3rem; color: var(--navy); margin-bottom: 4px; font-weight: 800; }
+  .price-card .plan-for { font-size: 0.85rem; color: var(--ink-soft); min-height: 40px; margin-bottom: 16px; }
+  .price-amount { font-size: 2.1rem; font-weight: 800; color: var(--navy); line-height: 1.2; }
+  .price-amount .yen { font-size: 1rem; font-weight: 700; }
+  .price-amount .per { font-size: 0.85rem; color: var(--ink-soft); font-weight: 600; }
+  .price-amount small { display:block; font-size: 0.72rem; color: var(--ink-soft); font-weight: 600; margin-top: 2px; }
+  .price-divider { height: 1px; background: var(--line); margin: 20px 0; }
+  .price-feat { list-style: none; display: flex; flex-direction: column; gap: 11px; flex-grow: 1; }
+  .price-feat li { display: flex; gap: 9px; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5; }
+  .price-feat li::before { content: "✓"; color: var(--green); font-weight: 800; flex-shrink: 0; }
+  .price-feat li.head { font-weight: 700; color: var(--navy); margin-top: 4px; }
+  .price-feat li.head::before { content: "＋"; color: var(--blue); }
+  .price-feat li.muted::before { content: "－"; color: #cbd5e1; }
+  .price-card .btn-wrap { margin-top: 24px; }
+  .price-card .btn-card { display: block; text-align: center; padding: 14px; border-radius: 999px; font-weight: 700; transition: transform 0.15s; }
+  .btn-card.solid { background: var(--gold); color: #fff; box-shadow: 0 6px 18px rgba(245,166,35,0.4); }
+  .btn-card.outline { background: #fff; color: var(--blue); border: 2px solid var(--blue); }
+  .price-card .btn-card:hover { transform: translateY(-2px); }
+  .price-note { text-align: center; color: var(--ink-soft); font-size: 0.86rem; margin-top: 30px; line-height: 1.8; }
+
+  /* Steps */
+  .steps { background: var(--bg); }
+  .step-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px; }
+  .step-card { background: #fff; border-radius: var(--radius); padding: 32px 26px 28px; box-shadow: var(--shadow); border-top: 4px solid var(--blue); position: relative; }
+  .step-card .num { position: absolute; top: -18px; left: 26px; width: 40px; height: 40px; background: var(--blue); color: #fff; border-radius: 50%; display: grid; place-items: center; font-weight: 800; box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4); }
+  .step-card:nth-child(4) { border-top-color: var(--gold); }
+  .step-card:nth-child(4) .num { background: var(--gold); box-shadow: 0 6px 16px rgba(245,166,35,0.4); }
+  .step-card h3 { margin-top: 12px; font-size: 1.04rem; color: var(--navy); margin-bottom: 10px; }
+  .step-card p { font-size: 0.91rem; color: var(--ink-soft); }
+
+  /* FAQ */
+  .faq { background: linear-gradient(180deg,#fff,var(--bg-alt)); }
+  .faq-list { max-width: 820px; margin-inline: auto; display: flex; flex-direction: column; gap: 14px; }
+  .faq-item { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--line); overflow: hidden; }
+  .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 22px 26px; font-size: 1rem; font-weight: 700; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: inherit; }
+  .faq-q .q-mark { color: var(--blue); font-weight: 800; margin-right: 10px; }
+  .faq-q .toggle { flex-shrink: 0; transition: transform 0.25s; color: var(--blue); font-size: 1.3rem; }
+  .faq-item.open .toggle { transform: rotate(45deg); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .faq-a-inner { padding: 0 26px 24px; color: var(--ink-soft); font-size: 0.95rem; }
+  .faq-item.open .faq-a { max-height: 460px; }
+
+  /* CTA */
+  .cta { background: linear-gradient(135deg, var(--navy), var(--blue)); color: #fff; position: relative; overflow: hidden; }
+  .cta::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 85% 15%, rgba(245,166,35,0.2), transparent 45%); }
+  .cta .wrap { position: relative; z-index: 2; }
+  .cta-head { text-align: center; margin-bottom: 44px; }
+  .cta-head h2 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; line-height: 1.4; margin-bottom: 16px; }
+  .cta-head p { color: rgba(255,255,255,0.85); font-size: 1.05rem; }
+  .form-card { background: #fff; border-radius: 20px; padding: 40px; max-width: 720px; margin-inline: auto; box-shadow: var(--shadow-lg); color: var(--ink); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .form-group { margin-bottom: 20px; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-group label { display: block; font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
+  .form-group label .req { color: #e11d48; font-size: 0.78rem; margin-left: 6px; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 15px; border: 1.5px solid var(--line); border-radius: 10px; font-size: 0.96rem; font-family: inherit; color: var(--ink); transition: border-color 0.2s, box-shadow 0.2s; background: #fff; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .form-submit { width: 100%; background: var(--gold); color: #fff; border: none; padding: 17px; border-radius: 999px; font-size: 1.1rem; font-weight: 800; cursor: pointer; font-family: inherit; box-shadow: 0 8px 24px rgba(245,166,35,0.45); transition: transform 0.15s, box-shadow 0.15s; margin-top: 8px; }
+  .form-submit:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(245,166,35,0.55); }
+  .form-privacy { text-align: center; font-size: 0.8rem; color: var(--ink-soft); margin-top: 16px; }
+  .form-success { display: none; text-align: center; padding: 30px; background: #ecfdf5; border: 1.5px solid var(--green); border-radius: 14px; color: #065f46; font-weight: 700; margin-top: 20px; }
+
+  /* Footer */
+  footer { background: #0a1f38; color: rgba(255,255,255,0.7); padding: 50px 0 30px; font-size: 0.88rem; }
+  .footer-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-bottom: 30px; }
+  .footer-logo { font-size: 1.1rem; font-weight: 800; color: #fff; margin-bottom: 10px; }
+  .footer-logo .star { color: var(--gold); }
+  .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+  .footer-links a:hover { color: #fff; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 20px; font-size: 0.8rem; color: rgba(255,255,255,0.45); }
+  .footer-disclaimer { font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-top: 10px; line-height: 1.7; }
+
+  /* Floating CTA */
+  .float-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(255,255,255,0.96); backdrop-filter: blur(8px); box-shadow: 0 -4px 20px rgba(0,0,0,0.1); padding: 12px 16px; display: none; z-index: 90; }
+  .float-cta a { display: block; text-align: center; background: var(--gold); color: #fff; padding: 14px; border-radius: 999px; font-weight: 800; box-shadow: 0 6px 16px rgba(245,166,35,0.4); }
+
+  @media (max-width: 860px) { .insight-chips { flex-direction: column; align-items: center; } }
+  @media (max-width: 640px) {
+    section { padding: 60px 0; }
+    .hero { padding: 60px 0 90px; }
+    .nav-cta { display: none; }
+    .form-card { padding: 28px 20px; }
+    .form-row { grid-template-columns: 1fr; }
+    .price-card.featured { transform: none; }
+    .lineflow-card { padding: 28px 22px; }
+    .float-cta { display: block; }
+    body { padding-bottom: 76px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="wrap nav">
+    <div class="logo"><span class="star">★</span>レビューブースト</div>
+    <a href="#contact" class="nav-cta">無料相談する</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap">
+    <span class="hero-badge">★ 店舗・クリニック・サロン・士業の経営者さまへ</span>
+    <h1>Googleの評判、<span class="hl">まるごとお任せ。</span><br>「選ばれ続けるお店」を、<br>ひとつのパッケージで。</h1>
+    <p class="lead">
+      悪い口コミ、変なサジェスト、ネットの評判 ——<br>
+      <b>AIによる口コミ対策サポート</b>から<b>提携弁護士の窓口</b>、<b>公式WEB・LINE・アプリ</b>まで。<br>
+      契約中ずっと使える月額パッケージで、Googleの評判を総合的に改善します。
+    </p>
+    <div class="stars-line">
+      <span class="stars"><span class="filled">★★</span><span class="empty">★★★</span></span>
+      <span class="arrow">→</span>
+      <span class="stars"><span class="filled">★★★★</span><span class="empty">★</span></span>
+      <span class="label">評判を上げて「選ばれるお店」へ</span>
+    </div>
+    <div class="hero-cta-row">
+      <a href="#contact" class="btn btn-primary">★ まずは無料で評判診断</a>
+      <a href="#included" class="btn btn-ghost">パッケージの中身を見る</a>
+    </div>
+    <p class="hero-note">※ 初回の評判診断は無料です。しつこい営業は一切いたしません。</p>
+  </div>
+  <div class="wave">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none" width="100%" height="90">
+      <path fill="#ffffff" d="M0,40 C360,90 1080,0 1440,50 L1440,90 L0,90 Z"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- Problems -->
+<section class="problems">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">SUCH PROBLEMS?</span>
+      <h2>こんな「ネットの評判」のお悩み、<br>ありませんか？</h2>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <span class="ico">😣</span>
+        <h3>事実と違う★1レビューを書かれた</h3>
+        <p>来店していない人や、誹謗中傷に近い内容の低評価が投稿され、店舗の印象が下がっている。</p>
+      </div>
+      <div class="problem-card">
+        <span class="ico">📉</span>
+        <h3>低評価のせいで新規客が減った</h3>
+        <p>Googleマップの★評価を見て来店をやめる人が増え、予約・問い合わせが目に見えて落ちている。</p>
+      </div>
+      <div class="problem-card">
+        <span class="ico">🔍</span>
+        <h3>変なサジェストが出てくる</h3>
+        <p>店名を検索すると「店名 + ネガティブな言葉」が候補に表示され、来店前の印象を損ねている。</p>
+      </div>
+      <div class="problem-card">
+        <span class="ico">🌐</span>
+        <h3>検索上位にネガティブな情報</h3>
+        <p>悪い評判の記事やまとめサイトが検索結果の上の方に出てきて、ずっと気になっている。</p>
+      </div>
+      <div class="problem-card">
+        <span class="ico">⭐</span>
+        <h3>良い口コミが集まらない</h3>
+        <p>満足してくれたお客様はいるのに、レビューを書いてもらう仕組みがなく、★が増えない。</p>
+      </div>
+      <div class="problem-card">
+        <span class="ico">⏰</span>
+        <h3>対策する時間も知識もない</h3>
+        <p>日々の営業で手一杯。何から手をつければいいか分からず、ずっと後回しになっている。</p>
+      </div>
+    </div>
+    <p class="problem-quote">
+      これ全部、<span class="accent">ひとつのパッケージ</span>でまとめてお任せできます。
+    </p>
+  </div>
+</section>
+
+<!-- Insight -->
+<section class="insight">
+  <div class="wrap">
+    <h2>口コミを「消す」ことが、<br>ゴールではありません。</h2>
+    <p>削除はあくまで手段。しかも消える保証はありません。私たちが目指すのは、★評価そのものを上げ、ネット全体の評判を整えて<b>「選ばれ続けるお店」</b>になること。だから、消えても・消えなくても前に進めます。</p>
+    <div class="insight-chips">
+      <div class="insight-chip means">
+        <div class="ttl">口コミを消す ＝ 手段</div>
+        <p>ガイドライン違反の口コミは、AIのサポートでご自身で申請。通らなければ行き止まりになる「手段」のひとつ。</p>
+      </div>
+      <div class="insight-chip goal">
+        <div class="ttl">評判を上げる ＝ ゴール</div>
+        <p>良い口コミを集め、サジェストや検索結果も整え、★が積み上がり続ける状態へ。長期的に強いお店をつくります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What's included -->
+<section class="included" id="included">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">ALL-IN-ONE PACKAGE</span>
+      <h2>評判改善に必要なものが、<br>ぜんぶ揃った総合パッケージ。</h2>
+      <p>「対策」も「集客の仕組み」も「守り」も、これひとつ。契約中はずっとご利用いただけます。</p>
+    </div>
+    <div class="inc-grid">
+      <!-- AI -->
+      <div class="inc-card">
+        <div class="top">
+          <div class="inc-ico" style="background:linear-gradient(135deg,#2563eb,#3b82f6)">🤖</div>
+          <div>
+            <h3>AI 口コミ対策サポート</h3>
+            <span class="inc-tag tag-ai">あなたの申請を支援</span>
+          </div>
+        </div>
+        <p>ガイドライン違反の可能性がある口コミの見分け方や、削除申請フォームの書き方を、AIが具体的にアドバイス。<b>申請はご自身で</b>行えるよう、最後までサポートします。</p>
+      </div>
+      <!-- Lawyer -->
+      <div class="inc-card">
+        <div class="top">
+          <div class="inc-ico" style="background:linear-gradient(135deg,#16a34a,#22c55e)">⚖️</div>
+          <div>
+            <h3>提携弁護士の窓口</h3>
+            <span class="inc-tag tag-law">法的対応はプロへ</span>
+          </div>
+        </div>
+        <p>悪質な誹謗中傷や権利侵害など、法的な対応が必要なケースは、提携する弁護士の窓口におつなぎ。専門家による対応で、安心して任せられます。</p>
+      </div>
+      <!-- Consul -->
+      <div class="inc-card">
+        <div class="top">
+          <div class="inc-ico" style="background:linear-gradient(135deg,#f5a623,#d98e0b)">⭐</div>
+          <div>
+            <h3>口コミ獲得・評判改善コンサル</h3>
+            <span class="inc-tag tag-ai" style="background:#fff5e6;color:#d98e0b">★を増やす仕組み</span>
+          </div>
+        </div>
+        <p>満足したお客様を自然にレビュー投稿へ導く導線づくり、Googleビジネスプロフィールの最適化（MEO）まで。★が貯まり続ける状態をつくります。</p>
+      </div>
+      <!-- WEB -->
+      <div class="inc-card">
+        <div class="badge-free">契約中 無料</div>
+        <div class="top">
+          <div class="inc-ico" style="background:linear-gradient(135deg,#0e7490,#0891b2)">🌐</div>
+          <div>
+            <h3>公式WEBサイト</h3>
+            <span class="inc-tag tag-free">契約中ずっと提供</span>
+          </div>
+        </div>
+        <p>店舗の魅力を伝える公式サイトを制作・運用。口コミへの導線も設計します。制作費はかからず、契約期間中はずっとご利用いただけます。</p>
+      </div>
+      <!-- LINE -->
+      <div class="inc-card">
+        <div class="badge-free">契約中 無料</div>
+        <div class="top">
+          <div class="inc-ico" style="background:linear-gradient(135deg,#06c755,#04a548)">💬</div>
+          <div>
+            <h3>公式LINE ＋ マーケ導線</h3>
+            <span class="inc-tag tag-free">契約中ずっと提供</span>
+          </div>
+        </div>
+        <p>公式LINEを構築し、登録→来店→口コミ依頼までの<b>集客導線まで設計・運用</b>。不満は口コミになる前にLINEで拾い、低評価を未然に防ぎます。</p>
+      </div>
+      <!-- App -->
+      <div class="inc-card">
+        <div class="badge-free">契約中 無料</div>
+        <div class="top">
+          <div class="inc-ico" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">📱</div>
+          <div>
+            <h3>店舗アプリ（iOS / Android）</h3>
+            <span class="inc-tag tag-free">契約中ずっと提供</span>
+          </div>
+        </div>
+        <p>再来店を促す自社アプリを提供。ポイントや通知でリピーターを囲い込みます。こちらも契約期間中はずっとご利用いただけます。</p>
+      </div>
+      <!-- Suggest -->
+      <div class="inc-card">
+        <div class="top">
+          <div class="inc-ico" style="background:linear-gradient(135deg,#0f2c4d,#1a4170)">🔍</div>
+          <div>
+            <h3>サジェスト対策</h3>
+            <span class="inc-tag tag-opt">上位プラン</span>
+          </div>
+        </div>
+        <p>「店名 + ネガティブな言葉」のような、検索候補（サジェスト）に出るネガティブワードの改善に取り組みます。上位プランでパッケージに含まれます。</p>
+      </div>
+      <!-- Reverse SEO -->
+      <div class="inc-card">
+        <div class="top">
+          <div class="inc-ico" style="background:linear-gradient(135deg,#b91c1c,#dc2626)">📉</div>
+          <div>
+            <h3>逆SEO 押し下げパック</h3>
+            <span class="inc-tag tag-opt">上位プラン</span>
+          </div>
+        </div>
+        <p>ネガティブな記事やページが検索上位に出てしまう場合に、ポジティブな情報を充実させ、相対的に下位へ押し下げます。上位プランに含まれます。</p>
+      </div>
+      <!-- AI support -->
+      <div class="inc-card">
+        <div class="top">
+          <div class="inc-ico" style="background:linear-gradient(135deg,#0891b2,#22d3ee)">💡</div>
+          <div>
+            <h3>契約者専用 AIサポート</h3>
+            <span class="inc-tag tag-allplan">全プラン共通・24時間</span>
+          </div>
+        </div>
+        <p>「この口コミどうすれば？」「次の一手は？」——AIチャットがいつでも即回答。専門知識がなくても、迷ったらすぐ相談できる手厚いサポートです。</p>
+      </div>
+      <!-- NFC card -->
+      <div class="inc-card">
+        <div class="top">
+          <div class="inc-ico" style="background:linear-gradient(135deg,#475569,#64748b)">💳</div>
+          <div>
+            <h3>NFC 口コミカード</h3>
+            <span class="inc-tag tag-allplan" style="background:#eef2f7;color:#475569">かざすだけ</span>
+          </div>
+        </div>
+        <p>レジやテーブルに置くNFCカード。お客様が<b>スマホをかざすだけ</b>で口コミ作成画面が開きます。QRより手間が少なく、投稿率がさらにアップ。<a href="https://kimito-link.com/products/plastic-card/" target="_blank" style="color:var(--blue);font-weight:700;">製品を見る ↗</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINE marketing flow -->
+<section class="lineflow">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">LINE × BUSINESS</span>
+      <h2>LINEは、業種別に“仕組み”を設計。</h2>
+      <p>ただLINEを作るだけではありません。口コミ獲得はもちろん、予約・リピート・追客まで——あなたの業種に合わせて最適な導線をカスタム設計・運用します。</p>
+    </div>
+    <div class="lineflow-card">
+      <h3>💬 LINEを使った評判アップの循環</h3>
+      <p class="sub">良い体験を、自然と「★」に変える導線を設計・運用します。</p>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="n">STEP 1</div>
+          <h4>LINE登録を促す</h4>
+          <p>来店時やWEB・アプリから公式LINEへ。お得情報でファン化。</p>
+        </div>
+        <div class="flow-step">
+          <div class="n">STEP 2</div>
+          <h4>来店・再来店を促進</h4>
+          <p>クーポンや通知で再来店を後押し。リピーターを増やす。</p>
+        </div>
+        <div class="flow-step">
+          <div class="n">STEP 3</div>
+          <h4>満足客に口コミ依頼</h4>
+          <p>満足したタイミングでLINEから口コミ投稿を自然にお願い。★が増える。</p>
+        </div>
+        <div class="flow-step">
+          <div class="n">STEP 4</div>
+          <h4>不満は先に拾う</h4>
+          <p>不満はLINEで受け止め店内で解決。低評価を未然に防止。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LINE design mindmap -->
+    <div class="mindmap">
+      <div class="mindmap-head">
+        <span class="mindmap-tag">DESIGN MAP</span>
+        <h3>LINE一本に、集客のすべてを“設計”します。</h3>
+        <p>単発の配信ではなく、目的ごとに役割を整理した「設計図（メニュー）」を引いてから運用します。</p>
+      </div>
+      <div class="mm">
+        <div class="mm-center">
+          <span class="mm-center__ic">💬</span>
+          <span>あなたのお店の<br>公式LINE</span>
+        </div>
+        <div class="mm-branches">
+          <div class="mm-node mm-node--a">
+            <span class="mm-node__ic">🎯</span>
+            <div><b>集客・新規獲得</b><span>登録特典・友だち紹介・WEB/アプリ連携</span></div>
+          </div>
+          <div class="mm-node mm-node--b">
+            <span class="mm-node__ic">📅</span>
+            <div><b>予約・問い合わせ</b><span>LINEで予約受付・自動応答・リマインド</span></div>
+          </div>
+          <div class="mm-node mm-node--c">
+            <span class="mm-node__ic">🔁</span>
+            <div><b>リピート促進</b><span>クーポン・来店サイクル通知・回数券</span></div>
+          </div>
+          <div class="mm-node mm-node--d">
+            <span class="mm-node__ic">⭐</span>
+            <div><b>口コミ獲得</b><span>満足客へ依頼／不満は先に拾う分岐設計</span></div>
+          </div>
+          <div class="mm-node mm-node--e">
+            <span class="mm-node__ic">🎁</span>
+            <div><b>ファン化・販促</b><span>会員ランク・限定情報・セグメント配信</span></div>
+          </div>
+          <div class="mm-node mm-node--f">
+            <span class="mm-node__ic">📊</span>
+            <div><b>分析・改善</b><span>反応を見て配信を最適化、毎月チューニング</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="mindmap-note">※ どの枝をどう組むかは<b>業種・店舗ごとにカスタム設計</b>。下のシナリオ分岐は「口コミ獲得」の枝の一例です。</p>
+    </div>
+
+    <!-- Branching scenario flowchart -->
+    <div class="branch">
+      <div class="branch-head">
+        <span class="branch-tag">SCENARIO DESIGN</span>
+        <h3>例：反応で枝分かれする「シナリオ分岐」。</h3>
+        <p>「ただ一斉送信」ではありません。お客様の反応に応じてメッセージを出し分け、口コミ獲得と低評価防止を自動で振り分けます。（これは口コミ獲得の一例です）</p>
+      </div>
+
+      <div class="branch-chart">
+        <!-- root -->
+        <div class="bnode bnode--root">
+          <span class="bnode__ic">💬</span>LINE登録 → 来店後アンケート
+        </div>
+        <div class="branch-split">分岐</div>
+
+        <div class="branch-cols">
+          <!-- satisfied path -->
+          <div class="bpath bpath--good">
+            <div class="bnode bnode--cond">😊 「満足」と回答</div>
+            <div class="bconnect"></div>
+            <div class="bnode">口コミ投稿をお願い<br>（ツール/NFCで簡単に）</div>
+            <div class="bconnect"></div>
+            <div class="bnode bnode--goal">⭐ 高評価レビュー獲得</div>
+          </div>
+
+          <!-- dissatisfied path -->
+          <div class="bpath bpath--bad">
+            <div class="bnode bnode--cond">😟 「不満」と回答</div>
+            <div class="bconnect"></div>
+            <div class="bnode">スタッフが個別フォロー<br>（公開前に店内で解決）</div>
+            <div class="bconnect"></div>
+            <div class="bnode bnode--goal2">🛡 低評価を未然に防止 → 再来店クーポン</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="branch-note">※ 上記は一例です。<b>業種・店舗ごとにヒアリングして、最適な分岐シナリオをカスタム設計・運用</b>します。</p>
+    </div>
+
+    <!-- Hearing-type branch by industry (tabbed) -->
+    <div class="hearing">
+      <div class="hearing-head">
+        <span class="hearing-tag">HEARING FLOW</span>
+        <h3>“いきなり売り込まない”ヒアリング型の会話設計。</h3>
+        <p>状況を一緒に整理しながら親身に進め、価値を伝えてから提案。お客様が納得した状態で次に進む——だから成約につながります。（業種別の設計例）</p>
+      </div>
+
+      <div class="hearing-tabs" role="tablist">
+        <button class="hearing-tab is-active" data-tab="clinic">🦷 クリニック・歯科</button>
+        <button class="hearing-tab" data-tab="estate">🏠 不動産</button>
+        <button class="hearing-tab" data-tab="food">🍴 飲食店</button>
+      </div>
+
+      <!-- CLINIC -->
+      <div class="hearing-panel is-active" data-panel="clinic">
+        <div class="hflow">
+          <div class="hstep"><span class="hstep__n">1</span><div class="hstep__b"><b>状況をヒアリング</b><span>「気になるのは？」虫歯／矯正／ホワイトニング／定期検診</span></div></div>
+          <div class="hstep"><span class="hstep__n">2</span><div class="hstep__b"><b>いつから・ご希望は？</b><span>痛みの有無・通院ペース・ご予算感をやさしく確認</span></div></div>
+          <div class="hstep"><span class="hstep__n">3</span><div class="hstep__b"><b>価値を説明（料金の前に）</b><span>治療内容・通院回数・痛みへの配慮・実績をていねいに</span></div></div>
+          <div class="hstep"><span class="hstep__n">4</span><div class="hstep__b"><b>いつ来院したい？</b><span>希望日を聞き、空き枠を提示して予約へ</span></div></div>
+        </div>
+        <div class="hgoal">
+          <div class="hgoal__head">📅 ご希望に合わせて予約枠をご提案</div>
+          <div class="hgoal__chips">
+            <span class="hchip">今すぐ診てほしい → 最短当日枠</span>
+            <span class="hchip">週末がいい → 土日枠</span>
+            <span class="hchip hchip--soft">まずは相談 → 無料カウンセリング</span>
+          </div>
+        </div>
+        <p class="hearing-cross">＋ 受診後アンケートで満足客は<b>口コミへ誘導</b>、定期検診は<b>自動リマインド</b>で再受診。</p>
+      </div>
+
+      <!-- ESTATE -->
+      <div class="hearing-panel" data-panel="estate">
+        <div class="hflow">
+          <div class="hstep"><span class="hstep__n">1</span><div class="hstep__b"><b>状況をヒアリング</b><span>「何をお探し？」賃貸／購入／売却／投資</span></div></div>
+          <div class="hstep"><span class="hstep__n">2</span><div class="hstep__b"><b>条件をうかがう</b><span>エリア・間取り・予算・入居/購入の時期</span></div></div>
+          <div class="hstep"><span class="hstep__n">3</span><div class="hstep__b"><b>価値を説明（物件提示の前に）</b><span>周辺相場・実績・サポート体制で安心感を</span></div></div>
+          <div class="hstep"><span class="hstep__n">4</span><div class="hstep__b"><b>いつ内見したい？</b><span>希望日を聞き、条件に合う物件を提案</span></div></div>
+        </div>
+        <div class="hgoal">
+          <div class="hgoal__head">🏘 ご希望に合う物件・内見をご提案</div>
+          <div class="hgoal__chips">
+            <span class="hchip">すぐ住みたい → 即入居可を優先</span>
+            <span class="hchip">じっくり → 新着を自動配信で追客</span>
+            <span class="hchip hchip--soft">売却検討 → 無料査定へ</span>
+          </div>
+        </div>
+        <p class="hearing-cross">＋ 成約者には<b>口コミ依頼</b>、検討中の方には<b>新着物件を自動配信</b>して反響を逃さない。</p>
+      </div>
+
+      <!-- FOOD -->
+      <div class="hearing-panel" data-panel="food">
+        <div class="hflow">
+          <div class="hstep"><span class="hstep__n">1</span><div class="hstep__b"><b>来店・LINE登録</b><span>登録特典で友だち化。利用シーンをさりげなく把握</span></div></div>
+          <div class="hstep"><span class="hstep__n">2</span><div class="hstep__b"><b>好み・来店ペースを把握</b><span>好きなメニュー・人数・利用目的（宴会/家族 等）</span></div></div>
+          <div class="hstep"><span class="hstep__n">3</span><div class="hstep__b"><b>価値を届ける</b><span>こだわり・季節限定・常連特典を配信して関係づくり</span></div></div>
+          <div class="hstep"><span class="hstep__n">4</span><div class="hstep__b"><b>次の来店を後押し</b><span>タイミングに合わせてクーポン・予約導線を提示</span></div></div>
+        </div>
+        <div class="hgoal">
+          <div class="hgoal__head">🎟 来店サイクルに合わせてご提案</div>
+          <div class="hgoal__chips">
+            <span class="hchip">空席時 → 当日クーポン</span>
+            <span class="hchip">記念日 → 特別プラン</span>
+            <span class="hchip hchip--soft">久しぶり → 再来店特典</span>
+          </div>
+        </div>
+        <p class="hearing-cross">＋ 満足客には<b>口コミ依頼</b>、不満は<b>個別に先回りフォロー</b>して低評価を防止。</p>
+      </div>
+
+      <p class="hearing-note">※ いずれも設計例です。<b>「迷っている方に値引きで釣るのではなく、価値を伝えて納得いただく」</b>方針で、業種・店舗ごとに会話シナリオをカスタム設計します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Review tool -->
+<section class="tool" id="tool">
+  <div class="wrap tool-wrap">
+    <div class="tool-text">
+      <span class="eyebrow">REVIEW BOOSTER TOOL</span>
+      <h2>口コミは、<span class="hl">タップだけで完成。</span><br>「書くのが面倒」を、なくす。</h2>
+      <p>お客様が口コミを書かない一番の理由は「文章を考えるのが面倒」だから。専用ツールなら、<b>いくつかの質問にボタンで答えるだけ</b>（約1分）で自然な口コミ文章が完成。コピーしてGoogleに貼るだけなので、★が驚くほど集まりやすくなります。</p>
+      <ul class="tool-points">
+        <li><span class="dot">1</span><span>来店後にQRコード、または<b>NFCカードにかざすだけ</b>。お客様の手間は最小限</span></li>
+        <li><span class="dot">2</span><span>タップで回答 → 文章を自動生成 → ワンタップでGoogleへ</span></li>
+        <li><span class="dot">3</span><span>業種・店舗ごとに質問や文面をカスタマイズして提供します</span></li>
+      </ul>
+      <a href="review-tool.html" target="_blank" class="tool-cta">▶ 実際のツールを試す（デモ）</a>
+    </div>
+    <div class="tool-phone">
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="ps-logo">🦷</div>
+          <div class="ps-eyebrow">Patient Review</div>
+          <div class="ps-name">〇〇クリニック</div>
+          <div class="ps-bar"><i></i></div>
+          <div class="ps-q">先生の説明は<br>わかりやすかったですか？</div>
+          <div class="ps-opt sel">とてもわかりやすかった</div>
+          <div class="ps-opt">わかりやすかった</div>
+          <div class="ps-opt">もう少し詳しく聞きたかった</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NFC 3-step diagram (full width) -->
+    <div class="nfc-flow">
+      <div class="nfc-flow-head">
+        <span class="nfc-flow-tag">💳 NFC 口コミカード</span>
+        <h3><span class="hl">スマホをかざすだけ。</span>QRを探す手間もゼロ。</h3>
+        <p>レジやテーブルに置いたカードにかざすだけで、口コミ作成ツールが自動で起動します。</p>
+      </div>
+      <div class="nfc-steps">
+        <!-- Step 1 -->
+        <div class="nfc-step">
+          <div class="nfc-step__art">
+            <svg viewBox="0 0 120 90" width="120" height="90" aria-hidden="true">
+              <!-- card -->
+              <rect x="14" y="44" width="58" height="38" rx="6" fill="#475569"/>
+              <rect x="14" y="44" width="58" height="38" rx="6" fill="none" stroke="#94a3b8" stroke-width="1"/>
+              <circle cx="30" cy="63" r="7" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+              <path d="M37 58a9 9 0 0 1 0 10M41 55a14 14 0 0 1 0 16" fill="none" stroke="#f5a623" stroke-width="2" stroke-linecap="round"/>
+              <!-- phone tapping -->
+              <rect x="64" y="10" width="34" height="56" rx="7" fill="#0f2c4d"/>
+              <rect x="68" y="15" width="26" height="42" rx="3" fill="#dbeafe"/>
+              <circle cx="81" cy="62" r="2.5" fill="#dbeafe"/>
+              <!-- tap waves -->
+              <path d="M58 50c4 4 4 12 0 16" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="nfc-step__n">STEP 1</div>
+          <h4>カードにスマホをかざす</h4>
+          <p>アプリのダウンロードは不要。かざすだけで反応します。</p>
+        </div>
+        <div class="nfc-arrow">→</div>
+        <!-- Step 2 -->
+        <div class="nfc-step">
+          <div class="nfc-step__art">
+            <svg viewBox="0 0 120 90" width="120" height="90" aria-hidden="true">
+              <rect x="43" y="8" width="34" height="60" rx="7" fill="#0f2c4d"/>
+              <rect x="47" y="13" width="26" height="50" rx="3" fill="#F0F6FB"/>
+              <!-- mini review UI -->
+              <circle cx="60" cy="22" r="4" fill="#2A7FBF"/>
+              <rect x="52" y="29" width="16" height="2.5" rx="1.25" fill="#9BB5CC"/>
+              <rect x="51" y="36" width="18" height="6" rx="2" fill="#2A7FBF"/>
+              <rect x="51" y="44" width="18" height="6" rx="2" fill="#fff" stroke="#D0E4EE" stroke-width="1"/>
+              <rect x="51" y="52" width="18" height="6" rx="2" fill="#fff" stroke="#D0E4EE" stroke-width="1"/>
+              <!-- sparkle -->
+              <text x="86" y="22" font-size="14">✨</text>
+            </svg>
+          </div>
+          <div class="nfc-step__n">STEP 2</div>
+          <h4>口コミ画面が自動で開く</h4>
+          <p>お店専用の質問ページがすぐに表示されます。</p>
+        </div>
+        <div class="nfc-arrow">→</div>
+        <!-- Step 3 -->
+        <div class="nfc-step">
+          <div class="nfc-step__art">
+            <svg viewBox="0 0 120 90" width="120" height="90" aria-hidden="true">
+              <rect x="43" y="8" width="34" height="60" rx="7" fill="#0f2c4d"/>
+              <rect x="47" y="13" width="26" height="50" rx="3" fill="#fff"/>
+              <!-- stars -->
+              <text x="49" y="34" font-size="11" fill="#f5a623">★★★★★</text>
+              <rect x="51" y="40" width="18" height="2.5" rx="1.25" fill="#cbd5e1"/>
+              <rect x="51" y="45" width="14" height="2.5" rx="1.25" fill="#cbd5e1"/>
+              <!-- google G badge -->
+              <circle cx="86" cy="60" r="13" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+              <text x="86" y="65" font-size="15" text-anchor="middle" font-weight="bold" fill="#4285F4">G</text>
+              <text x="60" y="80" font-size="11" text-anchor="middle">👍</text>
+            </svg>
+          </div>
+          <div class="nfc-step__n">STEP 3</div>
+          <h4>タップで回答 → 投稿</h4>
+          <p>ボタンで答えて文章が完成。そのままGoogleへ。</p>
+        </div>
+      </div>
+      <a href="https://kimito-link.com/products/plastic-card/" target="_blank" class="nfc-flow-link">NFC口コミカードの製品を見る ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- AI support -->
+<section class="aisupport">
+  <div class="wrap ai-wrap">
+    <div class="ai-text">
+      <span class="eyebrow">AI CONCIERGE</span>
+      <h2>困ったら、<span class="hl">いつでもAIに相談。</span><br>専門知識ゼロでも、迷わない。</h2>
+      <p>ご契約者さまには、<b>24時間つかえる専用のAIサポート</b>をご用意。口コミへの返信文、申請の進め方、次の打ち手まで、チャットで質問すればすぐに分かりやすく答えます。サポートまでAIで手厚いから、運用がはじめてでも安心です。</p>
+      <ul class="ai-points">
+        <li><span class="dot">✓</span><span><b>全プラン共通</b>。追加料金なしでご利用いただけます</span></li>
+        <li><span class="dot">✓</span><span>口コミ返信の文案づくり・申請のやり方も、その場でサポート</span></li>
+        <li><span class="dot">✓</span><span>難しい操作や専門用語も、かみくだいて説明します</span></li>
+      </ul>
+    </div>
+    <div class="ai-chat">
+      <div class="ai-chat-head">
+        <div class="av">🤖</div>
+        <div>
+          <div class="nm">レビューブースト AIサポート</div>
+          <div class="st">● オンライン｜24時間対応</div>
+        </div>
+      </div>
+      <div class="bubble user">★1で「対応が遅い」と書かれました。どう返信すればいい？</div>
+      <div class="bubble ai">まず<b>感謝とお詫び</b>を伝え、事実確認と改善策を簡潔に。返信文の例を3パターン作りますね。公開返信は他の見込み客も読むので、丁寧で前向きな姿勢が好印象です。</div>
+      <div class="bubble user">この口コミ、ガイドライン違反で消せそう？</div>
+      <div class="bubble ai">「来店していない第三者の投稿」の可能性があり、<b>違反として申請できる余地</b>があります。申請フォームの入力手順をご案内します（申請はお客様ご自身で行っていただきます）。</div>
+    </div>
+  </div>
+</section>
+
+<!-- App pride -->
+<section class="apppride">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">YOUR OWN APP</span>
+      <h2>あなたのお店のアプリが、<br><span class="accent">App Store と Google Play に並ぶ。</span></h2>
+      <p>「うちの店の、専用アプリ」。お客様のスマホのホーム画面に、あなたのお店が常駐します。<br>ちょっと誇らしくて、なにより——選ばれ続けるお店の証になります。</p>
+    </div>
+
+    <div class="apppride-grid">
+      <!-- Store search result mock -->
+      <div class="store-mock">
+        <div class="store-mock__head">
+          <span class="store-mock__store">📱 App Store</span>
+          <span class="store-mock__store store-mock__store--g">▶ Google Play</span>
+        </div>
+        <div class="store-search">🔍 〇〇クリニック</div>
+        <div class="store-list">
+          <div class="store-item store-item--top">
+            <div class="store-item__icon" style="background:linear-gradient(135deg,#2A7FBF,#3b9ae0)">🦷</div>
+            <div class="store-item__body">
+              <div class="store-item__name">〇〇クリニック 公式アプリ</div>
+              <div class="store-item__dev">あなたのお店</div>
+              <div class="store-item__meta">★ 4.9　・　医療</div>
+            </div>
+            <span class="store-item__btn">入手</span>
+          </div>
+          <div class="store-item store-item--dim">
+            <div class="store-item__icon" style="background:#cbd5e1"> </div>
+            <div class="store-item__body">
+              <div class="store-item__bar store-item__bar--lg"></div>
+              <div class="store-item__bar"></div>
+            </div>
+            <span class="store-item__btn store-item__btn--dim">入手</span>
+          </div>
+          <div class="store-item store-item--dim">
+            <div class="store-item__icon" style="background:#dbe3ec"> </div>
+            <div class="store-item__body">
+              <div class="store-item__bar store-item__bar--lg"></div>
+              <div class="store-item__bar"></div>
+            </div>
+            <span class="store-item__btn store-item__btn--dim">入手</span>
+          </div>
+        </div>
+        <div class="store-mock__cap">検索結果に、あなたのお店のアプリが表示されます</div>
+      </div>
+
+      <!-- Home screen mock -->
+      <div class="home-mock">
+        <div class="home-phone">
+          <div class="home-screen">
+            <div class="home-time">9:41</div>
+            <div class="home-grid">
+              <div class="home-app"><span class="home-app__ic home-app__ic--dim">📷</span><span class="home-app__lb">カメラ</span></div>
+              <div class="home-app"><span class="home-app__ic home-app__ic--dim">🗺</span><span class="home-app__lb">マップ</span></div>
+              <div class="home-app"><span class="home-app__ic home-app__ic--dim">🎵</span><span class="home-app__lb">ミュージック</span></div>
+              <div class="home-app"><span class="home-app__ic home-app__ic--dim">⚙️</span><span class="home-app__lb">設定</span></div>
+              <div class="home-app home-app--mine"><span class="home-app__ic" style="background:linear-gradient(135deg,#2A7FBF,#3b9ae0)">🦷</span><span class="home-app__lb">〇〇クリニック</span></div>
+              <div class="home-app"><span class="home-app__ic home-app__ic--dim">💬</span><span class="home-app__lb">LINE</span></div>
+              <div class="home-app"><span class="home-app__ic home-app__ic--dim">📅</span><span class="home-app__lb">カレンダー</span></div>
+              <div class="home-app"><span class="home-app__ic home-app__ic--dim">🧭</span><span class="home-app__lb">ブラウザ</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="home-mock__cap">お客様のホーム画面に常駐 → 思い出してもらえる</div>
+      </div>
+    </div>
+
+    <p class="apppride-note">※ アプリは契約期間中、無料でご提供。ストアへの公開申請から運用まで代行します。再来店・リピートを生む「自分のお店専用」の集客チャネルになります。</p>
+  </div>
+</section>
+
+<!-- Premium: full funnel -->
+<section class="premium" id="premium">
+  <div class="wrap">
+    <div class="premium-badge">★ PREMIUM PLAN</div>
+    <div class="section-head">
+      <h2>「集客〜成約」の仕組みを、まるごと構築。</h2>
+      <p>広告・SEOで“今すぐ困っている人”を集め、専用LPとLINE自動ヒアリングで成約まで。<br>単発で終わらせず、継続収益まで設計する最上位プランです。</p>
+    </div>
+
+    <!-- funnel flow -->
+    <div class="funnel">
+      <div class="fstep">
+        <span class="fstep__n">01</span>
+        <span class="fstep__ic">🔍</span>
+        <h4>広告 / SEO</h4>
+        <p>「今すぐ困っている人」の検索キーワードだけに絞って集客。広告は即効、SEOは資産化。</p>
+      </div>
+      <span class="fstep-arw">→</span>
+      <div class="fstep">
+        <span class="fstep__n">02</span>
+        <span class="fstep__ic">🎯</span>
+        <h4>狙うキーワード設計</h4>
+        <p>緊急・被害・指名系のKWを設計。検索意図に言葉を一致させ「自分のことを分かっている」を作る。</p>
+      </div>
+      <span class="fstep-arw">→</span>
+      <div class="fstep">
+        <span class="fstep__n">03</span>
+        <span class="fstep__ic">📄</span>
+        <h4>専用LP制作</h4>
+        <p>煽らず、実績・正直さ・保証で「ここなら大丈夫」を作る、サービス別の専用ランディングページ。</p>
+      </div>
+      <span class="fstep-arw">→</span>
+      <div class="fstep">
+        <span class="fstep__n">04</span>
+        <span class="fstep__ic">💬</span>
+        <h4>LINE自動ヒアリング</h4>
+        <p>友だち追加→自動トークで状況を整理。価値→目安価格の順で提案。リッチメニューで迷わせない。</p>
+      </div>
+      <span class="fstep-arw">→</span>
+      <div class="fstep fstep--goal">
+        <span class="fstep__n">05</span>
+        <span class="fstep__ic">🤝</span>
+        <h4>人が成約 → 継続収益</h4>
+        <p>最終見積・着手は必ず人が対応。完了後は月額保守などで長期的なお付き合いへ。</p>
+      </div>
+    </div>
+
+    <!-- highlights -->
+    <div class="premium-cols">
+      <div class="premium-box">
+        <h4>🎯 “今すぐ客”を狙う緊急キーワード</h4>
+        <p>放置できない検索ワードに広告費を集中。例：</p>
+        <div class="kw-tags">
+          <span class="kw-tag">サーバー 停止通知</span>
+          <span class="kw-tag">サイト 改ざん 復旧</span>
+          <span class="kw-tag">WordPress 復旧 業者</span>
+          <span class="kw-tag">Google 警告 解除</span>
+          <span class="kw-tag">マルウェア 駆除</span>
+        </div>
+      </div>
+      <div class="premium-box">
+        <h4>🛡 “煽らない”から、信頼される</h4>
+        <p>「残り◯件」「今すぐ電話」のような偽の緊急性は使いません。不安な状況のお客様には、煽る側ではなく<b>落ち着かせる側</b>に回る——それが結果的にいちばん成約につながる、という設計思想です（行動心理に基づく）。</p>
+      </div>
+    </div>
+
+    <div class="premium-price">
+      <div>
+        <div class="premium-price__label">プレミアムプラン（集客〜成約フル構築）</div>
+        <div class="premium-price__amt">応相談<span>／ 規模・業種に合わせてお見積り</span></div>
+      </div>
+      <a href="#contact" class="premium-price__btn">プレミアムプランを相談する →</a>
+    </div>
+    <p class="premium-note">※ 業種・サービス内容・集客規模に応じて設計が変わるため、内容をうかがった上でお見積りします。まずはお気軽にご相談ください。</p>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">PRICING</span>
+      <h2>料金プラン</h2>
+      <p>守備範囲に合わせて3プラン。束ねるほど割安です。まずは無料診断からどうぞ。<br>（集客〜成約まで丸ごと構築する<a href="#premium" style="color:var(--blue);font-weight:700;">プレミアムプラン</a>もご用意しています）</p>
+    </div>
+    <div class="price-grid">
+      <!-- Light -->
+      <div class="price-card">
+        <div class="plan-name">Light</div>
+        <p class="plan-for">まずは評判改善と集客基盤から始めたい方へ。</p>
+        <div class="price-amount">3<span class="yen">万円</span><span class="per">／月〜</span><small>（税別・契約期間中）</small></div>
+        <div class="price-divider"></div>
+        <ul class="price-feat">
+          <li>契約者専用 AIサポート（24時間）</li>
+          <li>口コミ獲得・評判改善コンサル</li>
+          <li>Googleビジネスプロフィール最適化（MEO）</li>
+          <li>公式WEBサイト（契約中 無料提供）</li>
+          <li>公式LINE ＋ マーケ導線（契約中 無料提供）</li>
+          <li>★評価の月次レポート</li>
+        </ul>
+        <div class="btn-wrap"><a href="#contact" class="btn-card outline">このプランを相談する</a></div>
+      </div>
+      <!-- Standard (featured) -->
+      <div class="price-card featured">
+        <span class="price-ribbon">★ いちばん選ばれています</span>
+        <div class="plan-name">Standard</div>
+        <p class="plan-for">悪い口コミ対策と集客を、まとめて強化したい方へ。</p>
+        <div class="price-amount">6<span class="yen">万円</span><span class="per">／月〜</span><small>（税別・契約期間中）</small></div>
+        <div class="price-divider"></div>
+        <ul class="price-feat">
+          <li class="head">Lightの内容すべて</li>
+          <li>AI 口コミ対策サポート（申請はご自身で）</li>
+          <li>店舗アプリ iOS / Android（契約中 無料提供）</li>
+          <li>LINEマーケ導線の運用代行</li>
+          <li>提携弁護士の窓口ご案内</li>
+        </ul>
+        <div class="btn-wrap"><a href="#contact" class="btn-card solid">このプランを相談する</a></div>
+      </div>
+      <!-- Pro -->
+      <div class="price-card">
+        <div class="plan-name">Pro</div>
+        <p class="plan-for">ネット上の評判リスクをまるごと防衛したい方へ。</p>
+        <div class="price-amount">要<span class="yen">お見積り</span><small>（税別・契約期間中）</small></div>
+        <div class="price-divider"></div>
+        <ul class="price-feat">
+          <li class="head">Standardの内容すべて</li>
+          <li>サジェスト対策</li>
+          <li>逆SEO 押し下げパック</li>
+          <li>提携弁護士の優先窓口</li>
+          <li>専任担当による手厚いサポート</li>
+        </ul>
+        <div class="btn-wrap"><a href="#contact" class="btn-card outline">このプランを相談する</a></div>
+      </div>
+    </div>
+    <p class="price-note">
+      ※ 金額は目安です。店舗数・口コミの状況により最適なプランをご提案します。料金はすべて税別表記です。<br>
+      ※ サジェスト・逆SEO・口コミ削除はいずれも結果を保証するものではありません。
+    </p>
+  </div>
+</section>
+
+<!-- Steps -->
+<section class="steps">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">HOW IT WORKS</span>
+      <h2>ご相談から改善までの流れ</h2>
+    </div>
+    <div class="step-grid">
+      <div class="step-card">
+        <span class="num">1</span>
+        <h3>無料の評判診断</h3>
+        <p>現在のGoogle口コミ・★評価・サジェスト・検索結果を診断。改善ポイントを無料でお伝えします。</p>
+      </div>
+      <div class="step-card">
+        <span class="num">2</span>
+        <h3>プランのご提案</h3>
+        <p>お店の状況とご予算に合わせて、最適なプランをご提案。ご納得いただいてからのスタートです。</p>
+      </div>
+      <div class="step-card">
+        <span class="num">3</span>
+        <h3>基盤づくり＆対策開始</h3>
+        <p>WEB・LINE・アプリを整え、口コミ獲得の仕組みを導入。AI・弁護士の窓口もすぐにご利用いただけます。</p>
+      </div>
+      <div class="step-card">
+        <span class="num">4</span>
+        <h3>毎月の改善サポート</h3>
+        <p>★評価や評判の推移をレポート。お役立ち情報の配信を含め、継続的に評判を磨き続けます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>よくあるご質問</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q"><span><span class="q-mark">Q.</span>口コミの削除も代行してくれるのですか？</span><span class="toggle">＋</span></button>
+        <div class="faq-a"><div class="faq-a-inner">いいえ、当社が削除申請を代行することはありません。ガイドライン違反の可能性がある口コミについて、見分け方や申請フォームの書き方をAIが具体的にサポートし、<b>申請はお客様ご自身で</b>行っていただきます。なお、削除はGoogleの判断によるため、消えることをお約束するものではありません。だからこそ私たちは、★評価を上げ評判全体を整えることを本命のゴールにしています。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span><span class="q-mark">Q.</span>悪質な誹謗中傷で、法的に対応したい場合は？</span><span class="toggle">＋</span></button>
+        <div class="faq-a"><div class="faq-a-inner">権利侵害や悪質な誹謗中傷など、法的な対応が必要なケースは、提携している弁護士の窓口におつなぎします。法律事務は弁護士が対応しますので、安心してご相談ください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span><span class="q-mark">Q.</span>WEBやLINE、アプリの制作費は別途かかりますか？</span><span class="toggle">＋</span></button>
+        <div class="faq-a"><div class="faq-a-inner">いいえ。月額プランに含まれており、<b>契約期間中は制作費なしでずっとご利用いただけます</b>。買い切りではなくサブスクリプション型のため、初期費用を抑えてスタートできます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span><span class="q-mark">Q.</span>サジェスト対策・逆SEOは必ず効果がありますか？</span><span class="toggle">＋</span></button>
+        <div class="faq-a"><div class="faq-a-inner">検索エンジンの仕様変更などの影響を受けるため、結果を保証するものではありません。ポジティブな情報を増やし相対的に改善を図る取り組みであり、継続的に状況を見ながら進めます。これらはPro（上位プラン）に含まれます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span><span class="q-mark">Q.</span>どんな業種が対象ですか？</span><span class="toggle">＋</span></button>
+        <div class="faq-a"><div class="faq-a-inner">飲食店・美容サロン・クリニック・整体院・士業など、Googleマップやネット検索で集客されるあらゆる店舗・事業者さまが対象です。まずは無料診断でお店の状況をお聞かせください。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <div class="cta-head">
+      <h2>まずは「無料の評判診断」から。</h2>
+      <p>しつこい営業はいたしません。口コミ・サジェスト・検索結果の状況を、無料で診断いたします。</p>
+    </div>
+    <div class="form-card">
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label>お名前<span class="req">必須</span></label>
+            <input type="text" name="name" required placeholder="例）山田 太郎" />
+          </div>
+          <div class="form-group">
+            <label>店舗・会社名</label>
+            <input type="text" name="company" placeholder="例）〇〇クリニック" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>メールアドレス<span class="req">必須</span></label>
+            <input type="email" name="email" required placeholder="例）info@example.com" />
+          </div>
+          <div class="form-group">
+            <label>電話番号</label>
+            <input type="tel" name="tel" placeholder="例）090-1234-5678" />
+          </div>
+        </div>
+        <div class="form-group full">
+          <label>ご興味のあるプラン</label>
+          <select name="topic">
+            <option value="無料の評判診断">まずは無料の評判診断を受けたい</option>
+            <option value="Light">Light プランについて知りたい</option>
+            <option value="Standard">Standard プランについて知りたい</option>
+            <option value="Pro">Pro プランについて知りたい</option>
+            <option value="その他">その他・相談したい</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>お困りごと・ご質問（任意）</label>
+          <textarea name="message" placeholder="例）事実と違う★1の口コミがあり、店名で検索すると変なサジェストも出ます。"></textarea>
+        </div>
+        <button type="submit" class="form-submit">★ 無料で相談する</button>
+        <p class="form-privacy">ご入力いただいた情報は、お問い合わせ対応の目的にのみ使用します。</p>
+      </form>
+      <div class="form-success" id="formSuccess">
+        ✓ 送信ありがとうございます。担当者より2営業日以内にご連絡いたします。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<!-- 関連サービスへの導線（2026-09-08 追加。買取代行・診断・パートナープログラムと相互リンク） -->
+<section class="related" id="related" style="padding:48px 0;background:#0f1522;border-top:1px solid rgba(255,255,255,.08)">
+  <div class="wrap">
+    <h2 style="font-size:1.4rem;margin:0 0 6px;color:#fff">あわせて使えるサービス</h2>
+    <p style="margin:0 0 18px;color:#aab4c3;font-size:.95rem">同じ会社（株式会社ベストトラスト）が運営しています。どれも最初の一歩は無料です。</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
+      <a href="https://bestprice-kaitori.com/" target="_blank" rel="noopener" style="display:block;background:#1a2233;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 18px;color:#fff;text-decoration:none"><b style="display:block;margin-bottom:4px">在庫・備品の処分は「送るだけ」</b><span style="color:#aab4c3;font-size:.9rem">閉店・改装で出た在庫や備品を、宅配で送るだけで業者の競りに出します。先にお金を出す必要はありません。</span></a>
+      <a href="https://reviewcheck.jp/" target="_blank" rel="noopener" style="display:block;background:#1a2233;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 18px;color:#fff;text-decoration:none"><b style="display:block;margin-bottom:4px">口コミの状態を1分で無料診断</b><span style="color:#aab4c3;font-size:.9rem">店名を入れるだけ。星・件数・近くの店との差が出ます。</span></a>
+      <a href="https://web-health-check.link/" target="_blank" rel="noopener" style="display:block;background:#1a2233;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 18px;color:#fff;text-decoration:none"><b style="display:block;margin-bottom:4px">社名で検索したときのリスクを確認</b><span style="color:#aab4c3;font-size:.9rem">WEBサイト健康診断。サイトの安全性は <u>マルウェアチェック.site</u> で。</span></a>
+      <a href="https://partner.reverse-re-birth-hack.com/" target="_blank" rel="noopener" style="display:block;background:#1a2233;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:16px 18px;color:#fff;text-decoration:none"><b style="display:block;margin-bottom:4px">紹介して報酬を受け取る（登録無料）</b><span style="color:#aab4c3;font-size:.9rem">知り合いのお店を紹介すると、成約報酬と継続報酬が管理画面で確認できます。</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo"><span class="star">★</span>レビューブースト</div>
+        <p>Google評判改善・集客 総合コンサルパック</p>
+      </div>
+      <div class="footer-links">
+        <a href="#included">パッケージ内容</a>
+        <a href="#pricing">料金プラン</a>
+        <a href="#contact">無料相談</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 レビューブースト. All rights reserved.</p>
+      <p class="footer-disclaimer">
+        ※ 当社は口コミの削除申請を代行するものではなく、お客様ご自身による申請をAI等で支援するサービスです。法的対応が必要な事案は提携弁護士をご案内します。口コミの削除・サジェスト改善・検索順位はいずれもGoogle等の判断や仕様によるものであり、結果を保証するものではありません。本サービスはGoogle LLCとは関係ありません。
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating CTA -->
+<div class="float-cta">
+  <a href="#contact">★ まずは無料で評判診断</a>
+</div>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btn.closest('.faq-item').classList.toggle('open');
+    });
+  });
+
+  // Hearing-flow tabs
+  document.querySelectorAll('.hearing-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var key = tab.getAttribute('data-tab');
+      document.querySelectorAll('.hearing-tab').forEach(function (t) { t.classList.toggle('is-active', t === tab); });
+      document.querySelectorAll('.hearing-panel').forEach(function (p) {
+        p.classList.toggle('is-active', p.getAttribute('data-panel') === key);
+      });
+    });
+  });
+  var form = document.getElementById('contactForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    form.style.display = 'none';
+    var ok = document.getElementById('formSuccess');
+    ok.style.display = 'block';
+    ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+
+</body>
+</html>
