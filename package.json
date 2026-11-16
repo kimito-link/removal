@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build:pages": "node -e \"const fs=require('fs');fs.mkdirSync('dist',{recursive:true});for(const f of ['index.html','review-tool.html'])fs.copyFileSync(f,'dist/'+f)\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
