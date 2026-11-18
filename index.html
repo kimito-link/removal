@@ -420,6 +420,18 @@
   .btn-card.solid { background: var(--gold); color: #fff; box-shadow: 0 6px 18px rgba(245,166,35,0.4); }
   .btn-card.outline { background: #fff; color: var(--blue); border: 2px solid var(--blue); }
   .price-card .btn-card:hover { transform: translateY(-2px); }
+  .pricing.spot { background: #fff; }
+  .spot-grid { max-width: 760px; margin: 0 auto; }
+  .case-box { max-width: 860px; margin: 40px auto 0; background: var(--bg, #f6f9fc); border: 2px dashed #c9dbf1; border-radius: 20px; padding: 28px 28px 22px; position: relative; }
+  .case-tag { display: inline-block; background: var(--navy); color: #fff; font-size: 0.72rem; font-weight: 800; letter-spacing: .12em; padding: 4px 12px; border-radius: 999px; margin-bottom: 10px; }
+  .case-box h3 { color: var(--navy); font-size: 1.15rem; margin-bottom: 14px; }
+  .case-dl { display: grid; grid-template-columns: 6.5em 1fr; gap: 10px 14px; font-size: 0.92rem; line-height: 1.7; }
+  .case-dl dt { font-weight: 800; color: var(--navy); }
+  .case-dl dd { margin: 0; color: var(--ink-soft); }
+  .case-body { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.85; margin-bottom: 10px; }
+  .case-link { color: var(--blue); font-weight: 700; text-decoration: underline; }
+  .case-note { font-size: 0.78rem; color: var(--ink-soft); margin-top: 16px; line-height: 1.7; }
+  @media (max-width: 560px) { .case-dl { grid-template-columns: 1fr; gap: 2px; } .case-dl dd { margin-bottom: 8px; } }
   .price-note { text-align: center; color: var(--ink-soft); font-size: 0.86rem; margin-top: 30px; line-height: 1.8; }
 
   /* Steps */
@@ -522,6 +534,7 @@
     <div class="hero-cta-row">
       <a href="#contact" class="btn btn-primary">★ まずは無料で評判診断</a>
       <a href="#included" class="btn btn-ghost">パッケージの中身を見る</a>
+      <a href="#spot" class="btn btn-ghost">単発の口コミ対策（固定料金）</a>
     </div>
     <p class="hero-note">※ 初回の評判診断は無料です。しつこい営業は一切いたしません。</p>
   </div>
@@ -1197,13 +1210,67 @@
   </div>
 </section>
 
+<!-- Spot (固定料金の口コミ対策サポート) 2026-11-18 追加 -->
+<section class="pricing spot" id="spot">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">SPOT SUPPORT</span>
+      <h2>口コミ対策スポットサポート（固定料金）</h2>
+      <p>「今ある悪い口コミを何とかしたい」方向けの単発プラン。<b>成功報酬はいただきません。</b>料金は件数に応じた固定制で、着手前のお支払いです。<br>申請は<b>お客様ご自身の名義</b>で行っていただき、当社は調査・申請文の作成サポート・手順のご案内を担当します。</p>
+    </div>
+    <div class="price-grid spot-grid">
+      <div class="price-card">
+        <div class="plan-name">1〜2件</div>
+        <p class="plan-for">特定の口コミに絞って対策したい方へ。</p>
+        <div class="price-amount">5<span class="yen">万円</span><span class="per">／一式</span><small>（税別・着手前のお支払い）</small></div>
+        <div class="price-divider"></div>
+        <ul class="price-feat">
+          <li>対象口コミの調査・ガイドラインとの照合</li>
+          <li>状況のヒアリング・要点の整理</li>
+          <li>ご本人名義で提出する申請文の作成サポート</li>
+          <li>申請フォームの入力手順のご案内</li>
+          <li>結果が出るまでのご相談・再申請のアドバイス</li>
+        </ul>
+        <div class="btn-wrap"><a href="#contact" class="btn-card outline">この内容で相談する</a></div>
+      </div>
+      <div class="price-card featured">
+        <span class="price-ribbon">★ 複数の口コミにお困りの方に</span>
+        <div class="plan-name">3〜5件</div>
+        <p class="plan-for">同じ相手からの投稿が続いている・複数ある方へ。</p>
+        <div class="price-amount">8<span class="yen">万円</span><span class="per">／一式</span><small>（税別・着手前のお支払い）</small></div>
+        <div class="price-divider"></div>
+        <ul class="price-feat">
+          <li class="head">1〜2件プランの内容すべて</li>
+          <li>投稿の傾向・連続性の整理（繰り返し投稿など）</li>
+          <li>口コミごとの申請文の作成サポート</li>
+          <li>新たな投稿が出た場合の対応アドバイス</li>
+        </ul>
+        <div class="btn-wrap"><a href="#contact" class="btn-card solid">この内容で相談する</a></div>
+      </div>
+    </div>
+    <p class="price-note">
+      ※ 6件以上・複数店舗の場合はお見積りします。<br>
+      ※ <b>成功報酬ではありません。</b>口コミを削除するかどうかはGoogleが判断するため、削除を保証するものではなく、料金は結果にかかわらず一律です。<br>
+      ※ 当社が申請を代行したり、投稿者やGoogleと交渉したりすることはありません。法的対応が必要な事案は提携弁護士をご案内します。
+    </p>
+
+    <div class="case-box">
+      <span class="case-tag">CASE</span>
+      <h3>【実績】Googleマップの口コミに関するご相談</h3>
+      <p class="case-body">Googleマップに投稿された口コミについてご相談をいただきました。口コミの内容の整理から、ご依頼者様が提出する申請文の作成、手順のご案内までサポートし、数日で解決に至りました。</p>
+      <p class="case-body">お客様からいただいた評価は、ランサーズのプロフィールからご覧いただけます。<!-- TODO: ランサーズのプロフィールURLに差し替え --><a href="#" class="case-link" target="_blank" rel="noopener">【プロフィールURL】</a></p>
+      <p class="case-note">※ 削除の判断はGoogleが行います。すべての口コミが削除できるわけではありません。</p>
+    </div>
+  </div>
+</section>
+
 <!-- Pricing -->
 <section class="pricing" id="pricing">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">PRICING</span>
-      <h2>料金プラン</h2>
-      <p>守備範囲に合わせて3プラン。束ねるほど割安です。まずは無料診断からどうぞ。<br>（集客〜成約まで丸ごと構築する<a href="#premium" style="color:var(--blue);font-weight:700;">プレミアムプラン</a>もご用意しています）</p>
+      <h2>月額パッケージ</h2>
+      <p>口コミ対策だけでなく、★評価を上げる仕組みまで継続して整えたい方へ。守備範囲に合わせて3プラン（いずれも固定の月額で、成功報酬はありません）。束ねるほど割安です。まずは無料診断からどうぞ。<br>（集客〜成約まで丸ごと構築する<a href="#premium" style="color:var(--blue);font-weight:700;">プレミアムプラン</a>もご用意しています）</p>
     </div>
     <div class="price-grid">
       <!-- Light -->
@@ -1306,6 +1373,10 @@
         <div class="faq-a"><div class="faq-a-inner">いいえ、当社が削除申請を代行することはありません。ガイドライン違反の可能性がある口コミについて、見分け方や申請フォームの書き方をAIが具体的にサポートし、<b>申請はお客様ご自身で</b>行っていただきます。なお、削除はGoogleの判断によるため、消えることをお約束するものではありません。だからこそ私たちは、★評価を上げ評判全体を整えることを本命のゴールにしています。</div></div>
       </div>
       <div class="faq-item">
+        <button class="faq-q"><span><span class="q-mark">Q.</span>「削除できたら支払う」成功報酬型にはできませんか？</span><span class="toggle">＋</span></button>
+        <div class="faq-a"><div class="faq-a-inner">成功報酬型はお受けしていません。削除するかどうかはGoogleが判断するもので、当社が削除という結果を約束したり、代わりに手続きを行ったりするものではないためです。スポットサポートは件数に応じた<b>固定料金（1〜2件 5万円／3〜5件 8万円・税別）</b>で、調査・申請文の作成サポート・手順のご案内までを一式で行い、申請はお客様ご自身の名義で行っていただきます。</div></div>
+      </div>
+      <div class="faq-item">
         <button class="faq-q"><span><span class="q-mark">Q.</span>悪質な誹謗中傷で、法的に対応したい場合は？</span><span class="toggle">＋</span></button>
         <div class="faq-a"><div class="faq-a-inner">権利侵害や悪質な誹謗中傷など、法的な対応が必要なケースは、提携している弁護士の窓口におつなぎします。法律事務は弁護士が対応しますので、安心してご相談ください。</div></div>
       </div>
@@ -1402,7 +1473,8 @@
       </div>
       <div class="footer-links">
         <a href="#included">パッケージ内容</a>
-        <a href="#pricing">料金プラン</a>
+        <a href="#spot">口コミ対策（固定料金）</a>
+        <a href="#pricing">月額パッケージ</a>
         <a href="#contact">無料相談</a>
       </div>
     </div>
