@@ -370,14 +370,13 @@ const shSoft = () => ({ type: "outer", color: "000000", blur: 7, offset: 2, angl
     // case box (anonymized)
     const cx = x0 + 2 * (cw + gx) + 0.05, cwid = 13.3 - 0.72 - cx;
     s.addShape(p.shapes.ROUNDED_RECTANGLE, { x: cx, y: y0, w: cwid, h: ch, fill: { color: BGALT }, line: { color: "C9DBF1", width: 1, dashType: "dash" }, rectRadius: 0.08 });
-    s.addText("CASE ｜ 従業員を名指しした口コミの削除申請サポート", { x: cx + 0.3, y: y0 + 0.22, w: cwid - 0.6, h: 0.45, fontFace: BODY, fontSize: 13, bold: true, color: NAVY });
+    s.addText("【実績】Googleマップの口コミに関するご相談", { x: cx + 0.3, y: y0 + 0.22, w: cwid - 0.6, h: 0.45, fontFace: BODY, fontSize: 13, bold: true, color: NAVY });
     s.addText([
-      { text: "ご相談者　", options: { bold: true, color: NAVY } }, { text: "商業施設の店舗に勤務する個人の方", options: { breakLine: true } },
-      { text: "状況　", options: { bold: true, color: NAVY } }, { text: "店舗口コミに本人の姓を挙げて事実と異なる★1の投稿が複数続き、勤務先での信頼に影響。店舗から報告しても削除されなかった。", options: { breakLine: true } },
-      { text: "対応　", options: { bold: true, color: NAVY } }, { text: "対象口コミの特定と要点整理／ご本人名義で提出する法的削除リクエストの申請文を作成／入力手順をご案内", options: { breakLine: true } },
-      { text: "結果　", options: { bold: true, color: NAVY } }, { text: "申請から約2日で、Googleが対象の口コミをポリシー違反として削除。", options: { bold: true, color: GREEN } },
+      { text: "Googleマップに投稿された口コミについてご相談をいただきました。口コミの内容の整理から、ご依頼者様が提出する申請文の作成、手順のご案内までサポートし、数日で解決に至りました。", options: { breakLine: true } },
+      { text: "お客様からいただいた評価は、ランサーズのプロフィールからご覧いただけます。", options: { breakLine: true } },
+      { text: "【プロフィールURL】", options: { bold: true, color: BLUE } },
     ], { x: cx + 0.3, y: y0 + 0.75, w: cwid - 0.6, h: 2.85, fontFace: BODY, fontSize: 11, color: INK, valign: "top", lineSpacing: 16, paraSpaceAfter: 6 });
-    s.addText("※ 削除の判断はGoogleが行います。すべての口コミが削除できるわけではありません。ご相談者が特定されないよう内容の一部をぼかしています。", { x: cx + 0.3, y: y0 + 3.6, w: cwid - 0.6, h: 0.55, fontFace: BODY, fontSize: 8.5, color: INKSOFT, lineSpacing: 11 });
+    s.addText("※ 削除の判断はGoogleが行います。すべての口コミが削除できるわけではありません。", { x: cx + 0.3, y: y0 + 3.6, w: cwid - 0.6, h: 0.55, fontFace: BODY, fontSize: 8.5, color: INKSOFT, lineSpacing: 11 });
     s.addText("※ 成功報酬ではありません。削除の可否はGoogleの判断で保証はできず、料金は結果にかかわらず一律です。当社が申請を代行したり、投稿者・Googleと交渉することはありません。6件以上はお見積り。", {
       x: 0.72, y: 6.5, w: 11.9, h: 0.45, fontFace: BODY, fontSize: 9.5, color: INKSOFT,
     });
