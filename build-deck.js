@@ -284,7 +284,7 @@ const shSoft = () => ({ type: "outer", color: "000000", blur: 7, offset: 2, angl
   {
     const s = p.addSlide();
     s.background = { color: BG };
-    head(s, "料金プラン", "守備範囲に合わせて3プラン。束ねるほど割安です。まずは無料診断からどうぞ。");
+    head(s, "月額パッケージ", "評判を継続して整えたい方へ。守備範囲に合わせて3プラン（固定の月額・成功報酬なし）。");
 
     const plans = [
       {
@@ -334,6 +334,51 @@ const shSoft = () => ({ type: "outer", color: "000000", blur: 7, offset: 2, angl
     }
     s.addText("※ 金額は目安です。店舗数・口コミの状況により最適なプランをご提案します。サジェスト・逆SEO・口コミ削除はいずれも結果を保証するものではありません。", {
       x: 0.72, y: 6.66, w: 11.5, h: 0.32, fontFace: BODY, fontSize: 9.5, color: INKSOFT,
+    });
+    footer(s);
+  }
+
+  // ===================== SLIDE 6b — SPOT (固定料金・成功報酬なし) =====================
+  {
+    const s = p.addSlide();
+    s.background = { color: BG };
+    head(s, "口コミ対策スポットサポート（固定料金）", "成功報酬なし・件数に応じた固定料金（着手前のお支払い）。申請はお客様ご自身の名義で行っていただきます。");
+    const plans = [
+      { name: "1〜2件", price: "5", feats: ["対象口コミの調査・規約との照合", "ヒアリング・要点の整理", "ご本人名義の申請文作成サポート", "申請フォームの入力手順のご案内", "結果が出るまでのご相談"], featured: false },
+      { name: "3〜5件", price: "8", feats: ["1〜2件の内容すべて", "投稿の傾向・連続性の整理", "口コミごとの申請文作成サポート", "新たな投稿への対応アドバイス"], featured: true },
+    ];
+    const cw = 3.55, gx = 0.25, x0 = 0.72, y0 = 1.95, ch = 4.3;
+    for (let i = 0; i < plans.length; i++) {
+      const pl = plans[i];
+      const x = x0 + i * (cw + gx), y = y0;
+      s.addShape(p.shapes.ROUNDED_RECTANGLE, { x, y, w: cw, h: ch, fill: { color: WHITE }, line: { color: pl.featured ? GOLD : LINE, width: pl.featured ? 2.5 : 1 }, rectRadius: 0.08, shadow: pl.featured ? sh() : shSoft() });
+      const pad = 0.35;
+      s.addText(pl.name, { x: x + pad, y: y + 0.3, w: cw - pad * 2, h: 0.5, fontFace: HEAD, fontSize: 20, bold: true, color: NAVY });
+      s.addText([
+        { text: pl.price, options: { fontSize: 34, bold: true, color: NAVY, fontFace: HEAD } },
+        { text: " 万円／一式", options: { fontSize: 13, bold: true, color: INKSOFT, fontFace: BODY } },
+      ], { x: x + pad, y: y + 0.85, w: cw - pad * 2, h: 0.6, valign: "middle" });
+      s.addText("（税別・着手前のお支払い）", { x: x + pad, y: y + 1.45, w: cw - pad * 2, h: 0.25, fontFace: BODY, fontSize: 9.5, color: INKSOFT });
+      s.addShape(p.shapes.LINE, { x: x + pad, y: y + 1.8, w: cw - pad * 2, h: 0, line: { color: LINE, width: 1 } });
+      let fy = y + 1.98;
+      for (const txt of pl.feats) {
+        s.addImage({ data: await icon(FaCheckCircle, "#" + GREEN), x: x + pad, y: fy + 0.03, w: 0.2, h: 0.2 });
+        s.addText(txt, { x: x + pad + 0.3, y: fy - 0.06, w: cw - pad * 2 - 0.3, h: 0.42, fontFace: BODY, fontSize: 11, color: INK });
+        fy += 0.42;
+      }
+    }
+    // case box (anonymized)
+    const cx = x0 + 2 * (cw + gx) + 0.05, cwid = 13.3 - 0.72 - cx;
+    s.addShape(p.shapes.ROUNDED_RECTANGLE, { x: cx, y: y0, w: cwid, h: ch, fill: { color: BGALT }, line: { color: "C9DBF1", width: 1, dashType: "dash" }, rectRadius: 0.08 });
+    s.addText("【実績】Googleマップの口コミに関するご相談", { x: cx + 0.3, y: y0 + 0.22, w: cwid - 0.6, h: 0.45, fontFace: BODY, fontSize: 13, bold: true, color: NAVY });
+    s.addText([
+      { text: "Googleマップに投稿された口コミについてご相談をいただきました。口コミの内容の整理から、ご依頼者様が提出する申請文の作成、手順のご案内までサポートし、数日で解決に至りました。", options: { breakLine: true } },
+      { text: "お客様からいただいた評価は、ランサーズのプロフィールからご覧いただけます。", options: { breakLine: true } },
+      { text: "【プロフィールURL】", options: { bold: true, color: BLUE } },
+    ], { x: cx + 0.3, y: y0 + 0.75, w: cwid - 0.6, h: 2.85, fontFace: BODY, fontSize: 11, color: INK, valign: "top", lineSpacing: 16, paraSpaceAfter: 6 });
+    s.addText("※ 削除の判断はGoogleが行います。すべての口コミが削除できるわけではありません。", { x: cx + 0.3, y: y0 + 3.6, w: cwid - 0.6, h: 0.55, fontFace: BODY, fontSize: 8.5, color: INKSOFT, lineSpacing: 11 });
+    s.addText("※ 成功報酬ではありません。削除の可否はGoogleの判断で保証はできず、料金は結果にかかわらず一律です。当社が申請を代行したり、投稿者・Googleと交渉することはありません。6件以上はお見積り。", {
+      x: 0.72, y: 6.5, w: 11.9, h: 0.45, fontFace: BODY, fontSize: 9.5, color: INKSOFT,
     });
     footer(s);
   }
